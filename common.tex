@@ -1,0 +1,103 @@
+
+% Package imports
+\usepackage{amsmath}
+\usepackage{fixmath}
+\usepackage{amssymb}
+\usepackage{eurosym}
+\usepackage{siunitx}
+\usepackage{esvect}
+\usepackage{bibentry}
+\usepackage{eurosym}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{textcomp}
+\usepackage{rotating}
+\usepackage{wasysym}
+\usepackage{hyphenat}
+\usepackage{expl3}
+\usepackage{pifont}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{menukeys}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{newfloat}
+%\usepackage{caption}
+\usepackage{nicefrac}
+\usepackage{datetime}
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+
+% Used by Python below
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
+
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+% Python for inline
+\newcommand{\todo}[1]{{\color{red} TODO: #1} \typeout{TODO TODO TODO #1}}
+\newcommand{\todoref}[0]{{\color{red} [TODO]\xspace}\typeout{REF}}
+\newcommand\nobrkhyph{\mbox{-}}
+
+%\newfloat{code}{H}{myc}
+%\DeclareCaptionType[fileext=ext]{listing}
+
+% Argmin for math
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+% For abbreviations such as i.e., e.g., …
+% Also, omit final dot from each def.
+\ExplSyntaxOn
+\newcommand\latinabbrev[1]{
+  \peek_meaning:NTF . {% Same as \@ifnextchar
+    #1\@}%
+  { \peek_catcode:NTF a {% Check whether next char has same catcode as \'a, i.e., is a letter
+      #1.\@ }%
+    {#1.\@}}}
+\ExplSyntaxOff
+
+\def\eg{\latinabbrev{e.g}}
+\def\etal{\latinabbrev{et al}}
+\def\etc{\latinabbrev{etc}}
+\def\ie{\latinabbrev{i.e}}
+
+\def\IO{I/O\@\xspace}
+\def\RND{R\,\&\,D\@\xspace}
+
+
+% For the \SI command
+\DeclareSIUnit\years{yrs}
+\DeclareSIUnit\pt{pt}
+\DeclareSIUnit\px{px}
+\DeclareSIUnit\dBA{dB(A)}
+\DeclareSIUnit\cpm{char\,/\,min}
+\DeclareSIUnit\wpm{WPM}
+\DeclareSIUnit\bps{bit\,/\,s}
+\DeclareSIUnit\bpm{bit\,/\,min}
+
+% For better table layout with ... ?
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+\newcommand{\specialcellc}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+
+\restylefloat{table}
+\frenchspacing
+
+\pgfplotsset{compat=1.8}
