@@ -132,11 +132,53 @@ Design criteria.
 Basic idea: GM defines room of type
 
 
-\subsubsection{Living}
+
+\subsection{Transportation \& Access}
+
+Transportation and access systems are usually the first ones players will encounter
+traveling to a new habitat.
+
+
+
+\begin{tableone}{Locations}
+Small hangar for storing (6 ground craft, 2 shuttles).\\
+Medium hangar for storing (20 ground craft, 6 shuttles).\\
+Large hangar for storing (100 ground craft, 20 shuttles).\\
+Huge hangar for storing (1000 ground craft, 100 shuttles).\\
+Shut down hangar containing no vehicles.\\
+Shut down hangar containing a few damaged vehicles.\\
+Shut down hangar containing one vehicle in pristine condition.\\
+Rail-based transit system connecting different wings of the hab.\\
+Capsule based transit system running in three dimensions.\\
+Tunnel system for ground vehicles and transport drones.\\
+Network of walking escalators connecting the local wing of the hab.\\
+High speed transport system for tiny morphs and drones spreading through the hab.\\
+Liquid filled transport tubes for aquatic morphs.\\
+Tiny maintenance airlock for a \todo{mini morph}.\\
+Small maintenance airlock capable of cycling a single person.\\
+Airlock for a group of 3 - 6 people.\\
+Large airlock for a dozen of people or a single vehicle.\\
+Gigantic airlock for two dozen of people and multiple vehicles.\\
+Airlock made of nano-tissues allowing characters to permeate slowly.\\
+Locked down airlock due to maintenance.\\
+Airlock welded shut.\\
+Airlock breached and sealed after previous incident.\\
+Sealed hull breach. Can be reopened, at risk of uncontrolled decompression.\\
+A bodybank / resleeving facility.\\
+As above, with attached farcaster port.\\
+\end{tableone}
+
+
+
+
+
+\subsection{Living \& Recreational}
+
+Living and recreational facilities are where most inhabitants spend most parts of their life.
 
 Room Types
 
-\starttableone
+\begin{tableone}{Locations}
 Tiny space made for \todo{tiny pods}.\\
 Cramped one-room apartment.\\
 Regular sized one-room apartment.\\
@@ -147,12 +189,25 @@ Detached station part including multiple rooms.\\
 Flooded space made for crab pods.\\
 Merely a \textit{parking spot} and power connector for a synth morph.\\
 Larger \todo{...} for avian morphs.\\
-\stoptableone
+Museum, displaying genuine Earth relics.\\
+Museum, displaying genuine specimen from Pandora Gates.\\
+A (soccer, tennis, basketball) court.\\
+Skydiving.\\
+Church.\\
+Large, fractal tank of water used recreationally and with rooms for living octopi.\\
+Morph racing.\\
+\todo{Mech-case} combat.\\
+Pleasure pod hotel.\\
+VIP lounge.\\
+Street food vendor.\\
+Restaurant where locals meet with the hab's best pan pizza.\\
+Upper-class restaurant with a nice view.\\
+Shop selling handmade (clothing, paintings, sculptures).\\
+Vehicle vendor near on of the hab's ports.\\
+\end{tableone}
 
 
-Room Contents
-
-\starttableone
+\begin{tableone}{Contents}
 % Contains
 Has latest furniture created by (Venusian, Jovian, ...) designers.\\
 Full with actual posters of Venusian Cloud Diving.\\
@@ -191,54 +246,38 @@ A neighbor exceeded her quota, she asks to fab item.\\
 A small \todo{crab} morph hidden in the corner that mistook you for intruders.\\
 Hab security was (accidentally?) alerted to your entry.\\
 Players find RFID tag that can unlock a nearby apartment.\\
-\stoptableone
+\end{tableone}
 
+ 
 
+\subsection{Production \& Research}
 
-
-\subsubsection{Commerce}
-
-
-Room Types
-
-\starttableone
-A small street food vendor.\\
-A restaurant where locals meet with the hab's best pan pizza.\\
-An upper-class restaurant with a nice view.\\
-A shop selling cases.\\
-\textellipsis clothing.\\
-\textellipsis vac suits.\\
-\textellipsis paintings \& art.\\
-A vehicle vendor near on of the hab's ports.\\
-\stoptableone
-
-
-Room Contents
-
-\starttableone
-% Contains
-% See
-% Smell
-% Hear
-% Feel
-% Taste
-% AR
-% Muse
-% Events
-\stoptableone
-
-
-
-
-\subsubsection{Industrial}
-
+Production and research facilities provide a unique backdrop to the world, and
+enable players to explore what drives the future world.
 
 Room Types
 
 \starttableone
+Highly secured backup insurance site.\\
+Plasma research.\\
+Nano research.\\
+Weapons research.\\
+Propulsion research.\\
+Antimatter research.\\
+AI research.\\
+Xenobiology research.\\
+Factor research.\\
+Geological.\\
+Stellar.\\
+Particle accelerator.\\
+Quantum.\\
+Uplift.\\
+The Fall.\\
+TITANs.\\
 Elemental processor extracting fabber capsules.\\
 Material testing facility.\\
 Production facility for vehicles.\\
+(Mining, drilling) facility.\\
 \textellipsis habitat parts.\\
 \textellipsis space propulsion systems.\\
 \textellipsis terraforming machinery.\\
@@ -289,45 +328,9 @@ Room Contents
 
 
 
+\subsection{Mesh \& VR}
 
-\subsubsection{Office}
-
-% Lots of office work will be done in VR / simulspace. What wouldn't be?
-\starttableone
-A creative place for \todo{hypercorp}.\\
-Recruitment for \todo{hypercorp}.\\
-Highly secured backup insurance site.\\
-\stoptableone
-
-
-
-\subsubsection{Research}
-
-% Same for office ... but physical r&d still a thing
-
-\starttableone
-Plasma research.\\
-Nano research.\\
-Weapons research.\\
-Propulsion research.\\
-Antimatter research.\\
-AI research.\\
-Xenobiology research.\\
-Factor research.\\
-Geological.\\
-Stellar.\\
-Particle accelerator.\\
-Quantum.\\
-Uplift.\\
-The Fall.\\
-TITANs.\\
-\stoptableone
-
-
-
-
-\subsubsection{VR}
-
+Unbound by physical constraints, VR worlds provide a place for work and escape.
 
 \starttableone
 A lush park.\\
@@ -337,6 +340,8 @@ An exact replica of the encompassing habitat.\\
 A \textit{design sweat shop} run by criminals, feeding hype for latest trends.\\
 Dante's Inferno.\\
 An aerostat over Patagonia.\\
+A creative place for \todo{hypercorp}.\\
+Recruitment for \todo{hypercorp}.\\
 \stoptableone
 
 
@@ -354,27 +359,31 @@ An aerostat over Patagonia.\\
 
 
 
-
-
-\subsubsection{Resleeving \& Medical}
+\subsection{Services \& Security}
 
 \starttableone
-A bodybank / resleeving facility.\\
-Trauma hospital.\\
+Control center managing section maintenance.\\
+Control center managing public security feeds.\\
+Control center managing security access.\\
+Control center managing energy distribution.\\
+Control center managing local traffic.\\
+Control center managing regional traffic.\\
+Vessel's bridge managing all of the above.\\
+Small booth housing a security drone.\\
+Security office with 1 - 6 officers.\\
 A fully automated \todo{bio tank} facility.\\
+
+Local jail.\\
+Trauma hospital.\\
+Prison complex.\\
+Secured prison node with simulspace storage.\\
+Missile storage for one of the ship's / hab's weapon system.\\
+Mass driver storage and feeds for ship's / hab's phalanx system.\\
 \stoptableone
 
 
+
 \starttableone
-% Contains
-% See
-% Smell
-% Hear
-% Feel
-% Taste
-% AR
-% Muse
-% Events
 After resleeving, the character is disoriented and unsure which year it is.\\
 After farcasting / resleeving, two weeks are mysteriously missing.\\
 As above, and the player's morph was upgraded to a better model.\\
@@ -387,51 +396,12 @@ The player bumps his (head, ellbow, shoulder) the first time he leaves the room.
 \stoptableone
 
 
-\subsubsection{Recreational}
-
-\starttableone
-Museum, displaying genuine Earth relics.\\
-Museum, displaying genuine specimen from Pandora Gates.\\
-A (soccer, tennis, basketball) court.\\
-Skydiving.\\
-Church.\\
-Large, fractal tank of water used recreationally and with rooms for living octopi.\\
-Morph racing.\\
-\todo{Mech-case} combat.\\
-Pleasure pod hotel.\\
-VIP lounge.\\
-\stoptableone
 
 
 
-\starttableone
-% Contains
-% See
-% Smell
-% Hear
-% Feel
-% Taste
-% AR
-% Muse
-% Events
+\subsection{Maintenance}
 
-\stoptableone
-
-
-\subsubsection{Transportation}
-
-\starttableone
-Rail-based transit system connecting different wings of the hab.\\
-Capsule based transit system running in three dimensions.\\
-Tunnel system for ground vehicles and transport drones.\\
-Network of walking escalators connecting the local wing of the hab.\\
-High speed transport system for tiny morphs and drones spreading through the hab.\\
-Liquid filled transport tubes for aquatic morphs.\\
-\stoptableone
-
-
-
-\subsubsection{Maintenance}
+Dark tunnels and a lack of traffic \todo {...}
 
 \starttableone
 Fresh water distribution system.\\
@@ -462,65 +432,11 @@ A runner for \todo{underground org} passes through.\\
 \stoptableone
 
 
-\subsubsection{Hangar}
-
-\starttableone
-Small hangar for storing (6 ground craft, 2 shuttles).\\
-Medium hangar for storing (20 ground craft, 6 shuttles).\\
-Large hangar for storing (100 ground craft, 20 shuttles).\\
-Huge hangar for storing (1000 ground craft, 100 shuttles).\\
-Shut down hangar containing no vehicles.\\
-Shut down hangar containing a few damaged vehicles.\\
-Shut down hangar containing one vehicle in pristine condition.\\
-\stoptableone
-
-
-\subsubsection{Security}
-
-\starttableone
-Small booth housing a security drone.\\
-Security office with 1 - 6 officers.\\
-Local jail.\\
-Prison complex.\\
-Secured prison node with simulspace storage.\\
-Missile storage for one of the ship's / hab's weapon system.\\
-Mass driver storage and feeds for ship's / hab's phalanx system.\\
-\stoptableone
-
-
-\subsubsection{Entrance}
-
-\starttableone
-Tiny maintenance airlock for a \todo{mini morph}.\\
-Small maintenance airlock capable of cycling a single person.\\
-Airlock for a group of 3 - 6 people.\\
-Large airlock for a dozen of people or a single vehicle.\\
-Gigantic airlock for two dozen of people and multiple vehicles.\\
-Airlock made of nano-tissues allowing characters to permeate slowly.\\
-Locked down airlock due to maintenance.\\
-Airlock welded shut.\\
-Airlock breached and sealed after previous incident.\\
-Sealed hull breach. Can be reopened, at risk of uncontrolled decompression.\\
-\stoptableone
-
-
-
-\subsubsection{Bridge / Central}
-
-\starttableone
-Control center managing section maintenance.\\
-Control center managing public security feeds.\\
-Control center managing security access.\\
-Control center managing energy distribution.\\
-Control center managing local traffic.\\
-Control center managing regional traffic.\\
-Vessel's bridge managing all of the above.\\
-\stoptableone
 
 
 
 
-\subsubsection{Countryside}
+\subsection{Countryside}
 % Mars, Luna, Titan, ...
 
 \starttableone
@@ -534,8 +450,8 @@ Rail system connecting habitats.\\
 Long straight road with little traffic.\\
 Small serpentines leading to a tin can down a crater.\\
 Two satellite dishes and aimed at different locations in the sky.\\
-Operational mine.\\
-Abandoned mine.\\
+Operational or abandoned mine.\\
+Excarvation site.\\
 Small emergency dome (\SI{3}{\m}) errected.\\
 (Mars) Cave with microclimate and unusual plant life.\\
 \stoptableone
@@ -543,7 +459,6 @@ Small emergency dome (\SI{3}{\m}) errected.\\
 
 \starttableone
 % Contains
-A used (EMP, flash) grenade.\\
 Tire tracks disappearing.\\
 Burn marks of a recent shuttle landing.\\
 % See
@@ -561,7 +476,7 @@ Micrometeorite impacts a few meters away, leaving a suspended dust cloud.\\
 
 
 
-\subsubsection{Space}
+\subsection{Space}
 
 Random encounters in open space are very unusual given the large distances and high relative speeds.
 Most of the sites below are meant to be explicitly targeted, not encountered \textit{along the way}.
@@ -614,6 +529,7 @@ Lines of monofilament wire are spun on neck height.\\
 Nanoswarm of unknown purpose is assembling from black patches on the floor.\\
 \todo{Abandoned sniper / surveillance} post targeting nearby embassy.
 Cigarete butt laced with mind-altering nano toxin.
+A used (EMP, flash) grenade lies discarded in a corner.\\
 \stoptableone
 
 

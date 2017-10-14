@@ -1,34 +1,49 @@
-
 % Package imports
 \usepackage{siunitx}
-\usepackage{listings}
+\usepackage[table]{xcolor}
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage{xspace}
 \usepackage{txfonts}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
-\usepackage{pgfplots}
 \usepackage{colortbl}
 \usepackage{longtable}
 \usepackage{xtab}
 \usepackage{float}
-\usepackage{color}
 \usepackage{newfloat}
-\usepackage{nicefrac}
-\usepackage{datetime}
 \usepackage{pdflscape}
-\usepackage{multicol}
 \usepackage{enumitem}
 \usepackage[xspace]{ellipsis}
 \usepackage{ifthen}
+\usepackage{fancyhdr}
+\usepackage{environ}
+\usepackage{tikz}
+\usepackage{eso-pic} % für AddToShipoutPicture
+\usepackage{tikzpagenodes}
+\usepackage{pifont}
 
-\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
-\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
+\usetikzlibrary{calc}
 
 
+% COLORS
+\DefineNamedColor{named}{eclipsered}{rgb}{0.686,0.066,0.082}
+\definecolor{tablecolor}{named}{eclipsered}
+
+
+% CUSTOM COMMANDS AND ABBREVIATIONS
 \newcommand{\todo}[1]{{\color{red} TODO: #1} \typeout{TODO TODO TODO #1}}
-\newcommand{\todoref}[0]{{\color{red} [TODO]\xspace}\typeout{REF}}
 \newcommand\nobrkhyph{\mbox{-}}
+
+\newcommand{\dice}[1]{{#1}}
+\newcommand{\skill}[2][]{{\ifthenelse{\equal{#1}{}}{#2}{#2\,(\num[retain-explicit-plus]{#1})}}}
+\newcommand{\modifier}[1]{{\num[retain-explicit-plus]{#1}}}
+\newcommand{\dv}[1]{{DV\,#1}}
+
+\def\eclipsephase{Eclipse Phase\xspace}
+\def\ep{EP\xspace}
+
+
 
 
 % For abbreviations such as i.e., e.g., …
@@ -47,37 +62,66 @@
 \def\etc{\latinabbrev{etc}}
 \def\ie{\latinabbrev{i.e}}
 
-\def\eclipsephase{Eclipse Phase\xspace}
-\def\ep{EP\xspace}
-
-\newcommand{\dice}[1]{{#1}}
-\newcommand{\skill}[2][]{{\ifthenelse{\equal{#1}{}}{#2}{#2\,(\num[retain-explicit-plus]{#1})}}}
-\newcommand{\modifier}[1]{{\num[retain-explicit-plus]{#1}}}
-\newcommand{\dv}[1]{{DV\,#1}}
-
-
-% For the \SI command
-\DeclareSIUnit\years{yrs}
-\DeclareSIUnit\pt{pt}
-\DeclareSIUnit\px{px}
-\DeclareSIUnit\dBA{dB(A)}
-\DeclareSIUnit\cpm{char\,/\,min}
-\DeclareSIUnit\wpm{WPM}
-\DeclareSIUnit\bps{bit\,/\,s}
-\DeclareSIUnit\bpm{bit\,/\,min}
 
 
 
-% Regular tables
+% TABLES
+\newsavebox{\tablebox}
+
+% Base fancy Eclipse Phase box
+% https://tex.stackexchange.com/questions/78692/using-an-environ-environment-with-newenvironment
+\environbodyname\rndtablebody
+\NewEnviron{rndtable}[1]{%
+
+    % Alternating background rows
+    \rowcolors{2}{tablecolor!10}{tablecolor!30}%
+
+    % Actual table content
+    % WTF DO I NEED '%' at the end of these lines since otherwise it will look ugly?
+    \savebox{\tablebox}{%
+        \begin{tabular}[htbp]{#1}%
+            \rndtablebody%
+        \end{tabular}%
+    }%
+
+    % Fancy frame
+    \begin{tikzpicture}
+        \begin{scope}
+          \clip[rounded corners=1ex] (0,-\dp\tablebox) -- (\wd\tablebox,-\dp\tablebox) -- (\wd\tablebox,\ht\tablebox) -- (0,\ht\tablebox) -- cycle;
+          \node at (0,-\dp\tablebox) [anchor=south west,inner sep=0pt]{\usebox{\tablebox}};
+        \end{scope}
+        \draw[rounded corners=1ex] (0,-\dp\tablebox) -- (\wd\tablebox,-\dp\tablebox) -- (\wd\tablebox,\ht\tablebox) -- (0,\ht\tablebox) -- cycle;
+    \end{tikzpicture}
+}
+
+
+% Table with one column
+\environbodyname\tableonebody
+\NewEnviron{tableone}[1]{
+    \begin{rndtable}{p{1.3\columnwidth} }
+        \multicolumn{1}{c}{
+            \cellcolor{tablecolor}\color{white} #1
+    } \\
+    \hline
+    \tableonebody
+    \end{rndtable}
+}
+
+% Table with two columns
+\environbodyname\tabletwobody
+\NewEnviron{tabletwo}[1]{
+    \begin{rndtable}{l | p{1.1\columnwidth} }
+        \multicolumn{2}{c}{
+            \cellcolor{tablecolor}\color{white} #1
+    } \\
+    \hline
+    \tabletwobody
+    \end{rndtable}
+}
+
 \def\starttabletwo{\begin{xtabular}{|p{.35\columnwidth}|p{.55\columnwidth}|}}
 \def\stoptabletwo{\end{xtabular}}
 \def\Rtwo #1|#2{ #1&#2}
 
 \def\starttableone{\begin{xtabular}{|p{1.1\columnwidth}|}}
 \def\stoptableone{\end{xtabular}}
-
-
-\restylefloat{table}
-\frenchspacing
-
-\pgfplotsset{compat=1.8}
