@@ -1,62 +1,34 @@
 
 % Package imports
-\usepackage{amsmath}
-\usepackage{fixmath}
-\usepackage{amssymb}
-\usepackage{eurosym}
 \usepackage{siunitx}
-\usepackage{esvect}
-\usepackage{bibentry}
-\usepackage{eurosym}
 \usepackage{listings}
 \usepackage{multirow}
 \usepackage{xspace}
-\usepackage{textcomp}
-\usepackage{rotating}
-\usepackage{wasysym}
-\usepackage{hyphenat}
-\usepackage{expl3}
-\usepackage{pifont}
-\usepackage{geometry}
-\usepackage{graphicx}
 \usepackage{txfonts}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{pgfplots}
 \usepackage{colortbl}
-\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{xtab}
 \usepackage{float}
-\usepackage{menukeys}
 \usepackage{color}
-\usepackage{listings}
 \usepackage{newfloat}
-%\usepackage{caption}
 \usepackage{nicefrac}
 \usepackage{datetime}
 \usepackage{pdflscape}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage[xspace]{ellipsis}
+\usepackage{ifthen}
 
-
-% Used by Python below
 \DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{8} % for bold
 \DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{8}  % for normal
 
-\definecolor{deepblue}{rgb}{0,0,0.5}
-\definecolor{deepred}{rgb}{0.6,0,0}
-\definecolor{deepgreen}{rgb}{0,0.5,0}
 
-
-% Python for inline
 \newcommand{\todo}[1]{{\color{red} TODO: #1} \typeout{TODO TODO TODO #1}}
 \newcommand{\todoref}[0]{{\color{red} [TODO]\xspace}\typeout{REF}}
 \newcommand\nobrkhyph{\mbox{-}}
-
-%\newfloat{code}{H}{myc}
-%\DeclareCaptionType[fileext=ext]{listing}
-
-% Argmin for math
-\DeclareMathOperator*{\argmin}{arg\,min}
 
 
 % For abbreviations such as i.e., e.g., …
@@ -75,8 +47,13 @@
 \def\etc{\latinabbrev{etc}}
 \def\ie{\latinabbrev{i.e}}
 
-\def\IO{I/O\@\xspace}
-\def\RND{R\,\&\,D\@\xspace}
+\def\eclipsephase{Eclipse Phase\xspace}
+\def\ep{EP\xspace}
+
+\newcommand{\dice}[1]{{#1}}
+\newcommand{\skill}[2][]{{\ifthenelse{\equal{#1}{}}{#2}{#2\,(\num[retain-explicit-plus]{#1})}}}
+\newcommand{\modifier}[1]{{\num[retain-explicit-plus]{#1}}}
+\newcommand{\dv}[1]{{DV\,#1}}
 
 
 % For the \SI command
@@ -89,12 +66,15 @@
 \DeclareSIUnit\bps{bit\,/\,s}
 \DeclareSIUnit\bpm{bit\,/\,min}
 
-% For better table layout with ... ?
-\newcommand{\specialcell}[2][c]{%
-  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
 
-\newcommand{\specialcellc}[2][c]{%
-  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+% Regular tables
+\def\starttabletwo{\begin{xtabular}{|p{.35\columnwidth}|p{.55\columnwidth}|}}
+\def\stoptabletwo{\end{xtabular}}
+\def\Rtwo #1|#2{ #1&#2}
+
+\def\starttableone{\begin{xtabular}{|p{1.1\columnwidth}|}}
+\def\stoptableone{\end{xtabular}}
 
 
 \restylefloat{table}
