@@ -1,0 +1,79 @@
+
+
+% Make better use of the page
+\geometry{% A4
+	papersize={210mm,297mm},
+	textwidth=162mm,
+	textheight=260mm,
+	inner=29mm,
+	top=15mm,
+	columnsep=15mm,
+	footskip=2mm,
+}
+
+
+% Prevent orphans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+\finalhyphendemerits = 10000
+\brokenpenalty = 7500
+
+
+% Misc paragraph settings.
+\pretolerance 2500
+\tolerance 500
+\hyphenpenalty 250
+\exhyphenpenalty 100
+\doublehyphendemerits 7500
+\finalhyphendemerits 7500
+\lefthyphenmin 3
+\righthyphenmin 3
+\looseness 1
+
+
+\setlength\parindent{0pt}
+
+
+% Add background picture
+\AddToShipoutPicture{
+\ifthenelse{\isodd{\value{page}}}%
+{
+    % If we are on an odd / front page
+    \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics{gfx/backgroundL.jpg}\vfill}}
+
+    \begin{tikzpicture}[remember picture, overlay]
+		% If we have single-column
+        % \draw[fill=white,color=white,opacity=0.9] (2.5,0) rectangle (19.5, 290);;
+
+		% If we have two-column
+		\draw[fill=white,color=white,opacity=0.9] (2.5,0) rectangle (10.7, 290);;
+        \draw[fill=white,color=white,opacity=0.9] (11.5,0) rectangle (19.5, 290);;
+    \end{tikzpicture}%
+
+}{
+    % If we are on an even page
+    \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[width=\paperwidth,height=\paperheight]{gfx/backgroundR.jpg}\vfill}}
+
+    \begin{tikzpicture}[remember picture, overlay]
+		% If we have single-column
+        % \draw[fill=white,color=white,opacity=0.9] (1.6,0) rectangle (18.2, 290);;
+
+		% If we have two-column
+		\draw[fill=white,color=white,opacity=0.9] (1.6,0) rectangle (9.6, 290);;
+        \draw[fill=white,color=white,opacity=0.9] (10.6,0) rectangle (18.2, 290);;
+
+    \end{tikzpicture}%
+}%
+}
+
+% hiermit erzwingen wir RGB-rendering und damit treffsicherere Farben, wenn transparenzen im Spiel sind
+\AddToShipoutPicture{%
+\makeatletter%
+\special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
+\makeatother%
+}
+
+
+\AtBeginShipout{%
+}

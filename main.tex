@@ -1,35 +1,52 @@
-\documentclass[a4]{article}
+\documentclass[a4]{book}
 %\documentclass[landscape,twocolumn,a4]{article}
 
-\input{common.tex}
-
+\input{common.imports.tex}
+\input{common.page.tex}
+\input{common.abbrev.tex}
+\input{common.tables.tex}
 
 
 \begin{document}
 \title{The Lost Transmission}
 
 
-\include{ch.stations}
-\include{ch.gmtips}
+\input{ch.stations}
+\input{ch.gmtips}
 
 %%%
 %%%
-%%% WORKING AREA
+%%% WORKING AREA1
 %%%
 %%%
 
-\section{GM Tips}
+\begin{multicols}{2}
 
-\subsection{Fantasy Tropes in Eclipse Phase}
+\section*{General GM Tips}
+\subsection*{Fantasy Tropes in Eclipse Phase}
+
 
 \eclipsephase can be daunting to GM at first, in particular when coming from a fantasy background.
 %
 Many \textit{tropes} require different game play elements to produce similar results.
 %
-Here are some tips to convert some of them to the \eclipsephase universe. \\
+Here are some tips to convert some of them to the \eclipsephase universe.
 
+\medskip
 
-\begin{xtabular}{|p{.35\columnwidth}|p{.55\columnwidth}|}
+For example:
+``The heroes travel along a lonely road through the forest.
+They find the remains of an ambush site.
+A wounded survivor tells them a princess was captured by an evil mage and is kept in an old tower.
+Being too far away from the next town to call for help, he urges the players to rescue her.
+The players sneak into his evil tower, fight the mage, and eventually rescue the princess.
+They are being handsomely rewarded.``
+
+In the \eclipsephase:
+
+\end{multicols}
+
+\begin{tabletwo}{Locations}
     Bandits & Gang (A, B). Pirates (X, Y, Z). Conflicting Faction (Brinkers, X). Spies (Jovian Republic).\\
     Monster Encounters & Automated Security Systems (X). AI (various morphs). Gamma Forks. (Not-quite) Uplifts. Infected (X-Risks). Nano swarms.\\
     Ambush & xxx \\
@@ -51,24 +68,17 @@ Here are some tips to convert some of them to the \eclipsephase universe. \\
     Gold \& Rewards & Information (multi-use blueprints, single-use expensive). Reputation. Contacts. Restricted Items (weapons, weapon blueprints). Morphs. Apartments. Vehicles. Ships.\\
     %Heroism & Must be agreed out-of-game. Firewall implies certain heroism. \\
     The Princess &  \\
-\end{xtabular}%
-
-\medskip
-
-For example:
-``The heroes travel along a lonely road through the forest.
-They find the remains of an ambush site.
-A wounded survivor tells them a princess was captured by an evil mage and is kept in an old tower.
-Being too far away from the next town to call for help, he urges the players to rescue her.
-The players sneak into his evil tower, fight the mage, and eventually rescue the princess.
-They are being handsomely rewarded.``
-
-In the \eclipsephase:
+\end{tabletwo}
 
 
-\section{Plot Hooks}
+\begin{multicols}{2}
 
-\starttableone
+\section*{Plot Hooks}
+
+\end{multicols}
+
+
+\begin{tableone}{Locations}
 Firwall and the fight of X-Risks.\\
 Salvage or retrieval of weapon systems.\\
 \textellipsis physical resources.\\
@@ -105,10 +115,11 @@ Socio-political intrigue between factions.\\
 \textellipsis hypercorps.\\
 \textellipsis governments.\\
 \textellipsis habitats.\\
-\stoptableone
+\end{tableone}
 
+\begin{multicols}{2}
 
-\section{Locations}
+\section*{Locations}
 
 Design criteria.
 
@@ -118,26 +129,30 @@ Design criteria.
     \item Don't interfere with story hooks, but provide them.
 \end{itemize}
 
-\subsection{Habitat} Planet, Station Type (cylinder, cole), Location (inner, outer, ...)
-\subsection{Economy} Old, Trans, New
-\subsection{Politics} Factions, ...
-\subsection{Governance} Vote, Junta, ...
-\subsection{Security} Weapons avail, just some, ...
-\subsection{Law \& Order} Private, Public, ...
-\subsection{Fabber Access} no, limited, unrestricted
+\subsection*{Habitat} Planet, Station Type (cylinder, cole), Location (inner, outer, ...)
+\subsection*{Economy} Old, Trans, New
+\subsection*{Politics} Factions, ...
+\subsection*{Governance} Vote, Junta, ...
+\subsection*{Security} Weapons avail, just some, ...
+\subsection*{Law \& Order} Private, Public, ...
+\subsection*{Fabber Access} no, limited, unrestricted
 
 
-\section{Habitat Building}
+\end{multicols}{2}
+
+
+
+\begin{multicols}{2}
+
+\section*{Habitat Building}
 
 Basic idea: GM defines room of type
 
-
-
-\subsection{Transportation \& Access}
+\subsection*{Transportation \& Access}
 
 Transportation and access systems are usually the first ones players will encounter
 traveling to a new habitat.
-
+\end{multicols}{2}
 
 
 \begin{tableone}{Locations}
@@ -170,13 +185,17 @@ As above, with attached farcaster port.\\
 
 
 
+\begin{multicols}{2}
 
 
-\subsection{Living \& Recreational}
+\subsection*{Living \& Recreational}
 
 Living and recreational facilities are where most inhabitants spend most parts of their life.
 
 Room Types
+
+\end{multicols}
+
 
 \begin{tableone}{Locations}
 Tiny space made for \todo{tiny pods}.\\
@@ -248,16 +267,18 @@ Hab security was (accidentally?) alerted to your entry.\\
 Players find RFID tag that can unlock a nearby apartment.\\
 \end{tableone}
 
- 
 
-\subsection{Production \& Research}
+\begin{multicols}{2}
+
+\subsection*{Production \& Research}
 
 Production and research facilities provide a unique backdrop to the world, and
 enable players to explore what drives the future world.
 
 Room Types
+\end{multicols}
 
-\starttableone
+\begin{tableone}{Locations}
 Highly secured backup insurance site.\\
 Plasma research.\\
 Nano research.\\
@@ -298,17 +319,18 @@ Power plant operating on solar energy.\\
 Automated farm raising (cows, chicken), producing meat.\\
 Synthetic morph production facility.\\
 Biomorph production facility.\\
-\stoptableone
+\end{tableone}
+
 
 Sizes
 
-\starttableone
+\begin{tableone}{Locations}
 One large hall.\\
 Several large halls connected (underground, via skyway).\\
 A (building, station section), not generally accessible.\\
 Consisting of several large (buildings, station arms).\\
 Occupying most of the habitat.\\
-\stoptableone
+\end{tableone}
 
 
 
@@ -327,12 +349,15 @@ Room Contents
 \stoptableone
 
 
+\begin{multicols}{2}
 
-\subsection{Mesh \& VR}
+\subsection*{Mesh \& VR}
 
 Unbound by physical constraints, VR worlds provide a place for work and escape.
 
-\starttableone
+\end{multicols}{2}
+
+\begin{tableone}{Locations}
 A lush park.\\
 Office spaces overlooking (Paris, New York, Tokyo).\\
 Camp near Great Pyramids in eternal sunset.\\
@@ -342,7 +367,7 @@ Dante's Inferno.\\
 An aerostat over Patagonia.\\
 A creative place for \todo{hypercorp}.\\
 Recruitment for \todo{hypercorp}.\\
-\stoptableone
+\end{tableone}
 
 
 \starttableone
@@ -359,9 +384,9 @@ Recruitment for \todo{hypercorp}.\\
 
 
 
-\subsection{Services \& Security}
+\subsection*{Services \& Security}
 
-\starttableone
+\begin{tableone}{Locations}
 Control center managing section maintenance.\\
 Control center managing public security feeds.\\
 Control center managing security access.\\
@@ -379,11 +404,11 @@ Prison complex.\\
 Secured prison node with simulspace storage.\\
 Missile storage for one of the ship's / hab's weapon system.\\
 Mass driver storage and feeds for ship's / hab's phalanx system.\\
-\stoptableone
+\end{tableone}
 
 
 
-\starttableone
+\begin{tableone}{Locations}
 After resleeving, the character is disoriented and unsure which year it is.\\
 After farcasting / resleeving, two weeks are mysteriously missing.\\
 As above, and the player's morph was upgraded to a better model.\\
@@ -393,17 +418,20 @@ Player learns an old friend / love has recently resleeved here.\\
 The morph comes with complimentary facial surgery to make Ego feel more at home.\\
 The mirror in the waking chamber has a crack at face height as if from a punch.\\
 The player bumps his (head, ellbow, shoulder) the first time he leaves the room.\\
-\stoptableone
+\end{tableone}
 
 
 
+\begin{multicols}{2}
 
 
-\subsection{Maintenance}
+\subsection*{Maintenance}
 
 Dark tunnels and a lack of traffic \todo {...}
 
-\starttableone
+\end{multicols}{2}
+
+\begin{tableone}{Locations}
 Fresh water distribution system.\\
 Sewage system.\\
 Waste water treatment.\\
@@ -416,9 +444,9 @@ A Mesh backbone node.\\
 Ventilation tunnels (with extreme UV air filtering).\\
 (Abandoned, Stand-by, Occupied) emergency shelter.\\
 Construction site, preparing for hab extension.\\
-\stoptableone
+\end{tableone}
 
-\starttableone
+\begin{tableone}{Locations}
 % Contains
 % See
 % Smell
@@ -429,17 +457,17 @@ Construction site, preparing for hab extension.\\
 % Muse
 % Events
 A runner for \todo{underground org} passes through.\\
-\stoptableone
+\end{tableone}
 
 
 
 
 
 
-\subsection{Countryside}
+\subsection*{Countryside}
 % Mars, Luna, Titan, ...
 
-\starttableone
+\begin{tableone}{Locations}
 Large crater.\\
 Habitat is being constructed.
 Massive terraforming towers circulate air.\\
@@ -454,10 +482,10 @@ Operational or abandoned mine.\\
 Excarvation site.\\
 Small emergency dome (\SI{3}{\m}) errected.\\
 (Mars) Cave with microclimate and unusual plant life.\\
-\stoptableone
+\end{tableone}
 
 
-\starttableone
+\begin{tableone}{Locations}
 % Contains
 Tire tracks disappearing.\\
 Burn marks of a recent shuttle landing.\\
@@ -472,27 +500,27 @@ Movement can be seen on the horizon.\\
 % Events
 Shuttle passes over the player's heads.\\
 Micrometeorite impacts a few meters away, leaving a suspended dust cloud.\\
-\stoptableone
+\end{tableone}
 
 
 
-\subsection{Space}
+\subsection*{Space}
 
 Random encounters in open space are very unusual given the large distances and high relative speeds.
 Most of the sites below are meant to be explicitly targeted, not encountered \textit{along the way}.
 As always, apply common sense.
 
-\starttableone
+\begin{tableone}{Locations}
 A habitat.\\
 Tiny habitat ship made for dozen people.\\
 Traveling scum barge.\\
 Fully automated communication relay facility.\\
 Planetary observation satellite.\\
 (Security, border protection) vessel.\\
-\stoptableone
+\end{tableone}
 
 % Space if awefully empty ...
-\starttableone
+\begin{tableone}{Locations}
 % Contains
 % See
 % Smell
@@ -507,15 +535,15 @@ Faint transmissions outside of regular travel routes.\\
 Jettisoned cargo of little value.\\
 Jettisoned cargo of high value.\\
 While outside, player loses grip and tumbles into space.\\
-\stoptableone
+\end{tableone}
 
 
 
-\section{Paint it Black}
+\section*{Paint it Black}
 
 These events can be mixed with any scene to give it a darker twist.
 
-\starttableone
+\begin{tableone}{Locations}
 Dents and impacts on the wall indicate a fight that must have occurred here.\\
 A severed robotic octopus arm is still attached to a grip on the wall.\\
 Killsat warning, designated to another vessel, can be overhead on an emergency frequency.\\
@@ -530,12 +558,12 @@ Nanoswarm of unknown purpose is assembling from black patches on the floor.\\
 \todo{Abandoned sniper / surveillance} post targeting nearby embassy.
 Cigarete butt laced with mind-altering nano toxin.
 A used (EMP, flash) grenade lies discarded in a corner.\\
-\stoptableone
+\end{tableone}
 
 
 
 
-\section{Combat}
+\section*{Combat}
 
 % Setting
 The situational modifiers only apply if successfully exploited by
@@ -544,7 +572,7 @@ by other combatant (\eg, special vision).
 %
 Feel free to grant advantages and disadvantages to both Players and NPCs.
 
-\starttableone
+\begin{tableone}{Locations}
 % Providing mechanical bonus / malus
 Low crates provide minor cover (Attacker \modifier{-10}).\\
 Crates provide moderate cover (Attacker \modifier{-20}).\\
@@ -567,11 +595,11 @@ A large pile of \todo{sand} was dumped near a deactivated ventilation shaft.\\
 Large sculptures hang on thin wires from the ceiling (\skill{Attack}, \dv{3d10}).\\
 % Elemental inspiration
 
-\stoptableone
+\end{tableone}
 
 
 % Random events during combat
-\starttableone
+\begin{tableone}{Locations}
 Pressured line ruptures, oil effectively blinding characters. (Attacker \modifier{-30}, \SI{50}{\percent} miss.).\\
 Bullet ricochets, hitting a random person or object.\\
 Character falls \SI{3}{\m} into shaft (\skill{Passive Perception} to avoid, \dv{2d10} ). \\
@@ -588,10 +616,9 @@ Mini drones of unknown origin approach, recording the battle from various angles
 A news drone approaches, recording the battle.\\
 All lights go out.\\
 As above, and emergency lights turn on.\\
+\end{tableone}
 
-\stoptableone
-
-\section{That NPC}
+\section*{That NPC}
 
 faction
 motivation

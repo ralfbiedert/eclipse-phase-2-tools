@@ -1,0 +1,66 @@
+
+% TABLES
+\newsavebox{\tablebox}
+
+% Base fancy Eclipse Phase box
+% https://tex.stackexchange.com/questions/78692/using-an-environ-environment-with-newenvironment
+\environbodyname\rndtablebody
+\NewEnviron{rndtable}[1]{%
+
+    % Alternating background rows
+    %\rowcolors{2}{tablecolor!10}{tablecolor!30}%
+    \taburowcolors[2]{tablecolor!10 .. tablecolor!30}%
+    % \addtolength{\extrarowheight}{0.3ex}%
+    % \addtolength{\extrarowdepth}{0.3ex}%
+
+    % Actual table content
+    % WTF DO I NEED '%' at the end of these lines since otherwise it will look ugly?
+    \savebox{\tablebox}{%
+        \begin{tabu}[htbp]{#1}%
+            \rndtablebody%
+        \end{tabu}%
+    }%
+
+    % Fancy frame
+    \begin{tikzpicture}
+        \begin{scope}
+          \clip[rounded corners=1ex] (0,-\dp\tablebox) -- (\wd\tablebox,-\dp\tablebox) -- (\wd\tablebox,\ht\tablebox) -- (0,\ht\tablebox) -- cycle;
+          \node at (0,-\dp\tablebox) [anchor=south west,inner sep=0pt]{\usebox{\tablebox}};
+        \end{scope}
+        \draw[rounded corners=1ex] (0,-\dp\tablebox) -- (\wd\tablebox,-\dp\tablebox) -- (\wd\tablebox,\ht\tablebox) -- (0,\ht\tablebox) -- cycle;
+    \end{tikzpicture}
+
+}
+
+
+% Table with one column
+\environbodyname\tableonebody
+\NewEnviron{tableone}[1]{
+    \begin{rndtable}{ X }
+        \multicolumn{1}{c}{
+            \cellcolor{tablecolor}\color{white} \Huge{#1}
+    } \\
+    \hline
+    \tableonebody
+    \end{rndtable}
+}
+
+% Table with two columns
+\environbodyname\tabletwobody
+\NewEnviron{tabletwo}[1]{
+    %\begin{rndtable}{p{0.25\columnwidth} | p{0.7\columnwidth} }
+    \begin{rndtable}{ l | X }
+        \multicolumn{2}{c}{
+            \cellcolor{tablecolor}\color{white} #1
+    } \\
+    \hline
+    \tabletwobody
+    \end{rndtable}
+}
+
+\def\starttabletwo{\begin{xtabular}{|p{.35\columnwidth}|p{.55\columnwidth}|}}
+\def\stoptabletwo{\end{xtabular}}
+\def\Rtwo #1|#2{ #1&#2}
+
+\def\starttableone{\begin{xtabular}{|p{1.1\columnwidth}|}}
+\def\stoptableone{\end{xtabular}}
