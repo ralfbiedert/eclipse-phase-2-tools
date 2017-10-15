@@ -1,0 +1,178 @@
+
+\section*{Combat}
+\DefineNamedColor{named}{eclipsered}{rgb}{0.686,0.566,0.482}
+\definecolor{tablecolor}{named}{eclipsered}
+
+
+
+Each combat turn takes \SI{3}{s}. In each turn the player can do either:
+
+\begin{itemize}
+    \itembox \num{1} complex and \num{1} quick action,
+    \itembox \num{1} task action and \num{1} quick action,
+    \itembox \num{3} quick actions.
+\end{itemize}
+
+Additionally, player may take any number of automatic actions per action turn.
+
+\bigskip
+
+\begin{eptable}{ l | X}
+   \rndheader{2}{Action Examples}
+   Automatic & Talk, base perception (\modifier{-20}), defend, drop, moving, \textellipsis\\
+   Quick & Activate, explain, normal perception, draw gun, go cover, \textellipsis\\
+   Complex & Aim, attack (gun, melee), examine, reload, complex device, \textellipsis\\
+   Task & Anything longer than \SI{2}{s} (\eg, hack, repair, heal ...)\\
+\end{eptable}
+
+
+\bigskip
+
+\begin{eptable}{l | l | X}
+   \rndheader{3}{Movement}
+   Base Movement & Automatic & Moves base rate (\eg, \SI{4}{m})\\
+   Full Movement & Automatic & Moves full rate (\eg, \SI{20}{m}), \modifier{-20} to actions.\\
+   Rushing & Complex & Moves base + full (\eg, \SI{24}{m})$^\dagger$.\\
+   Jumping & Quick & Running: \SI{6}{m}$^\dagger$.\\
+   Standing Up & Quick & Movement rate halved afterwards.\\
+   Non-Standard & Complex & Swimming, climbing, \textellipsis for base move.\\
+   Zero Gravity & - & Half movement rate$^\dagger$. Jump any length.\\
+   High Gravity & - & See rules$^\dagger$.\\
+\end{eptable}
+
+\bigskip
+
+The basic combat sequence:
+
+\begin{itemize}
+    \itembox \textbf{Declare Attack}. Skill depends on weapon type, \eg., Melee, Gun, Athletics (grenades), Interface (weapon system).
+    \itembox \textbf{Declare Defense}. Melee (Melee, Fray), Ranged (Fray / 2). Psi (Willpower). Full Defense (\modifier{+30} bonus when used as complex action).
+    \itembox \textbf{Apply Modifiers}. See Modifier tables.
+    \itembox \textbf{Make Opposed Tests}. Both opponents roll.
+    \itembox \textbf{Determine Result}. Handled as opposed test. Per attacker \textbf{superior success} inflict \dv{1d6} more. If \textbf{attacker critical} double damage or half target's armor (GM choice).
+    \itembox \textbf{Roll Damage}. Also apply any special damage weapon might cause.
+    \itembox \textbf{Apply Armor}. Subtract remaining armor from damage. \textbf{Armor piercing} halves target armor. \textbf{Critical armor piercing} fully ignores armor.
+    \itembox \textbf{Apply Damage}. Record damage. If accumulated damage exceeds Durability target incapacitated. If exceeds Death Rating target destroyed.
+    \itembox \textbf{Determine Wounds}. Each multiple above Wound Threshold inflicts wound.
+\end{itemize}
+
+
+\pdfsnippet{gfx/combat-combined}
+
+\subsection*{Surprises}
+
+\begin{itemize}
+    \itembox Make opposed test between \skill{Infiltration} and \skill[-20]{Perception}.
+\end{itemize}
+
+
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Special Attacks}
+   Centered Blast & DV drops by \modifier{-2} for each meter from center.\\
+   Uniform Blast & All in range full DV. Drops by \modifier{-2} for each meter outside.\\
+   Cone & See Cone Attack table.\\
+   Helpless Target & Inflict maximum DV, no defense. Does not apply in combat.\\
+   Called Shot & Attack with \modifier{-10}. On superior success see Called Shots table. \\
+   Shock Attack & Make \skill{REF+EA+Size}$^\dagger$ or \textit{incap.} 1 turn (+2 per sup. failure), \textit{stun.} \SI{3}{min}. On success stunned for 3 turns. \\
+   Social Attack & Opposed test \skill{Provoke} vs \skill{WIL}. See table Social Attacks. \\
+   2+ Weapons & Each weapon separate attack, cumulative \modifier{-20} after first. \\
+\end{eptable}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Cone Attack}
+   Point Blank \& Close & Affects \num{1} target, \dv{+1d10}.\\
+   Range & Affects \num{2} targets \SI{1}{m} of each other.\\
+   Beyond Range & Affects \num{2} targets \SI{1}{m} of each other, \dv{-1d10}\\
+\end{eptable}
+
+Cone attack requires weapon that does cone damage.
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Called Shot Results}
+   Weak spot & Armor halved. GM might rule has no weak spot.\\
+   Disarm & Victim gets half DV. Make \skill[-30]{SOM} or weapon off \dice{1d10} m$^\dagger$.\\
+   Knockdown & Applies \textit{prone} condition. \\
+   Redirect & Move opponent \SI{2}{m}. May make \skill[-30]{REF} to save. \\
+   Special Target & Inflict other status conditions (\eg, blinded, hindered). \\
+\end{eptable}
+
+
+All Called Shots results \textit{only} apply if attacker succeeded
+with \modifier{-10} attack \textit{AND} scores superior success.
+Extra superior success can sometimes be used to increase modifiers or
+inflict additional damage (e.g, full instead of half). See rule book for details.
+
+\bigskip
+
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Social Attacks}
+   Calm & Soothe opponent into pausing hostilities temporarily.\\
+   Fluster & Opponent \modifier{-10} for next action, additional \modifier{-10} per. sup. success.\\
+   Inspire & NPC receives \modifier{+10} next action.\\
+   Intimidate & Make opponent not attack, s.o. else, take cover, run away \num{1} turn.\\
+   Taunt & Force opponent to attack you with their next action.\\
+\end{eptable}
+
+Also consult Social Modifiers table in the following chapter.
+
+\pdfsnippet{gfx/combat-objects}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Conditions}
+   Blinded & All physical \modifier{-30}, still miss \SI{50}{\percent}. Skill check to move full.\\
+   Confused & \skill[-30]{COG} p. turn. Failed: mutter; flee; rnd. attack or action.\\
+   Dazed & No action except base move and defend.\\
+   Deafened & Cannot hear. Initiative \modifier{-3}, Perception \modifier{-30}.\\
+   Grappled & No action (even Fray) except Melee / SOM \modifier{-30} to escape.\\
+   Incapacitated & No action whatsoever (not even defensive).\\
+   Impaired & Suffer \modifier{-10}, \modifier{-20}, \modifier{-30}, depending on condition. \\
+   Paralyzed & No physical action (not even defensive). Mental / Mesh allowed. \\
+   Prone & Quick action to get up. Melee opponent \modifier{+20}, ranged \modifier{-10}.\\
+   Stunned & Suffer \modifier{-30} physical, \modifier{-10} mental.\\
+   Unconscious & Helpless. Treat bios w. stim, cases w. \skill[-30]{INT} if DV < DUR.\\
+\end{eptable}
+
+Conditions can be set by weapons or circumstances.
+
+\bigskip
+
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Weapon Traits}
+   Armor Piercing & Inflicts \dv{-1d10}, but halves armor.\\
+   Blinding & No anti-glare: \skill{REF} or blind \num{1} turn$^\dagger$. Perm. on crit.\\
+   Concealable & Receive \modifier{30} for Infiltration hiding weapon.\\
+   Fixed & Needs stand or be prone, otherwise \modifier{-20} to attack.\\
+   Knockdown & Target \skill{REF} or be knocked down.\\
+   No Smartlink & Receive \modifier{-10} to attack.\\
+   No Point-Blank / Close & No modifiers at point-blank; or may not fire.\\
+   Pain & Target \skill{WIL} or flee \num{1} turn, \modifier{-20} to next action$^\dagger$.\\
+   Paralyzing & Target \skill{REF} or paralyzed, \skill[-30]{REF} on sup. attack.\\
+   Shock & Inflicts shock effect.\\
+   Stun & Target \skill{SOM} or stunned$^\dagger$.\\
+   Two-Handed & Needs two hands, or \modifier{-20} used with one.\\
+\end{eptable}
+
+See core book for details on traits for given weapon / ammunition.
+
+\bigskip
+
+\begin{eptable}{ X }
+   \rndheader{1}{Tactical Networks}
+   Collate maps, tag spacial features.\\
+   Share real time position information.\\
+   Share sensory input between members.\\
+   Encrypted communication.\\
+   Smartlink / weapon data.\\
+   Overwatch, \modifier{+10} against surprises.\\
+   Indirect fire, help distant targets to aim.\\
+   Analysis with real time suggestions and warning.\\
+\end{eptable}

@@ -1,0 +1,143 @@
+
+\section*{Health}
+\DefineNamedColor{named}{eclipsered}{rgb}{0.186,0.566,0.182}
+\definecolor{tablecolor}{named}{eclipsered}
+
+
+
+\begin{eptable}{ X }
+   \rndheader{1}{Wounds}
+   Each wound causes cumulative \modifier{-10} on all tests, \modifier{-1} to initiative.\\
+   When receiving wound, \skill{SOM} or knockdown.\\
+   When receiving 2x wound at once, automatic knockdown. \skill{SOM} or unconscious.\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox If character suffered wound and damage exceed DUR they are in
+            danger of bleeding out. Make \skill{SOM}. On failure receive
+            \dv{1} per wound per turn until dead or stabilized with \skill{Medicine: Paramedic}.
+\end{itemize}
+
+\bigskip
+
+\pdfsnippet{gfx/health-stress}
+
+\begin{eptable}{ l | X | X }
+   \rndheader{3}{First Aid}
+   Medicine: Paramedic & 1 wnd. and \dv{1d10} & \SI{10}{min} + 10 per wnd.\\
+\end{eptable}
+
+\bigskip
+
+\begin{eptable}{ l | X | X }
+   \rndheader{3}{Healing}
+   No Biomods & \dv{1d10} per day & 1 per week.\\
+   Biomods & \dv{1d10} per \SI{12}{h} & 1 per 3 days.\\
+   Medichines & \dv{1d10} per \SI{1}{h} & 1 per 1 days.\\
+   Nanobandages (max 3) & \dv{1d10} per \SI{1}{h} & 1 per 1 days.\\
+   Healing Vat & \dv{2d10} per \SI{1}{h} & 1 per 2 hours.\\
+   Poor Conditions & x2 & x2\\
+   Harsh Conditions & x3 & x3\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox All damage must be healed first before wounds can be healed!
+    \itembox Medicine: Paramedic is exception as it heals both
+            at same time. Can only be used once per set of
+            injuries. Only within first 24 hours.
+\end{itemize}
+
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Stress Sources}
+   Alienation & Disconnection to the self, loss of self.\\
+   Helplessness & Inability to control events, betrayal.\\
+   The Unknown & Anything alien.\\
+   Violence & Threats and harm to self and others.\\
+\end{eptable}
+
+\bigskip
+
+\begin{eptable}{ X }
+   \rndheader{1}{Traumas}
+   Each trauma causes cumulative \modifier{-10} on all tests, \modifier{-1} to initiative.\\
+   Receiving trauma, \skill{WIL} or stunned, shake w. cmplx. action. Triggers disorder.\\
+   Receiving 2x trauma at once, automatic stunned. \skill{SOM} or ASR.\\
+   ASR: Attack OR Flee OR Detach. Friends can try \skill[-30]{Provoke} to snap out.\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox Traumas trigger disorder of the same type they are from.
+    \itembox Players encouraged to role play reactions like anxiety, confusion, indecisiveness, fixation, nausea, tremors, echolalia.
+    \itembox To recall later what happened \skill[-30]{COG} check.
+    \itembox Accute Stress Responses (ASR) determined randomly. Player remains in mode until incapacitated, threat avoided, destroyed or snapped out.
+\end{itemize}
+
+
+\bigskip
+
+\begin{eptable}{ X }
+   \rndheader{1}{Stressful Experience}
+   When encountering something horrific \skill{WIL} check.\\
+   On failure receive stress as indiciated on table.\\
+   On each trauma, take note of event on character sheet.\\
+   Receiving \num{5} traumas w.o. receiving disorder, character hardens.\\
+   Hardening permanently removes \modifier{-5} to WIL or SAV.\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox Disorders are received by stress exceeding lucidity.
+    \itembox Disorders are triggered by traumas or circumstances.
+\end{itemize}
+
+\bigskip
+
+\begin{eptable}{ X }
+   \rndheader{1}{Psychic Care}
+   Player can be treated by Psychosurgery or Know: Psychology.\\
+   Long term process, no more 1 hour per real day.\\
+   Stress heals at \sv{1d6} per hour.\\
+   Traumas heal at \num{1} per \num{8} hours, \ie., effectively \num{8} days.\\
+   Disorders heal at \num{1} per \num{40} hours, \ie., effectively \num{40} days.\\
+   Each trauma and disorder applies \modifier{-10} to test.\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox If patient receives new stress during treatment, it must be restarted.
+    \itembox If VR is used, each hour of healing still requires full simulated day for person.
+    \itembox Healing naturally, players can make \skill{INT} each month they didn't get new
+            stress, healing \sv{1d6} or \num{1} trauma. Disorders require \num{3} months.
+\end{itemize}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Disorders}
+   Addiction & Needs fix or receive negative modifier.\\
+   Alien Behavior Disorder & Prone to exhibiting alien behavior.\\
+   Anxiety & Needs to be convinced to do almost anything.\\
+   Atavism & Show primitive or animalistic behavior.\\
+   ADHD & Negative perception modifier and task effects.\\
+   Autophagy & Consume yourself.\\
+   Bipolar & Prone to risky behavior.\\
+   Body Dysmorphia & Prone to alienation.\\
+   Cosmic Anxiety Disorder & Flee from aliens / TITANs. \\
+   Conversion Disorder & Blindness, deafness, loss of balance, ...\\
+   Depression & Requires test to take any action. \\
+   DPD & Separate personality. \\
+   Fugue & Totally non-responsive. \\
+   Insomnia & Long rests become short, no short. Bad perception.\\
+   Narcissistic PD & Demand attention.\\
+   Paramnesia & Recall memories not own, confused about self. \\
+   Paranoia & Expect betrayal everywhere. \\
+   Phobia & Try to avoid phobia's focus. \\
+   PTSD & Respond to triggers with violence. \\
+   Schizophrenia & Experience delusions and hallucinations. \\
+\end{eptable}
+
+\begin{itemize}
+    \itembox Most disorders have complex triggers and effects. For details check rule book.
+    \itembox Effects are often resisted by \skill{WIL} tests for one or a few rounds.
+\end{itemize}
