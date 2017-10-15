@@ -1,6 +1,9 @@
 
 % TABLES
 \newsavebox{\tablebox}
+\preto\tabu{\setcounter{magicrownumbers}{0}}
+\newcounter{magicrownumbers}
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
 
 % Base fancy Eclipse Phase box
 % https://tex.stackexchange.com/questions/78692/using-an-environ-environment-with-newenvironment
@@ -45,6 +48,20 @@
     \end{rndtable}
 }
 
+
+% Table with two columns, one of which is row number
+\environbodyname\tabletworndbody
+\NewEnviron{tabletwornd}[1]{
+    \begin{rndtable}{ l | X }
+        \multicolumn{2}{c}{
+            \cellcolor{tablecolor}\color{white} \Huge{#1}
+    } \\
+    \hline
+    \tabletworndbody
+    \end{rndtable}
+}
+
+
 % Table with two columns
 \environbodyname\tabletwobody
 \NewEnviron{tabletwo}[1]{
@@ -57,10 +74,3 @@
     \tabletwobody
     \end{rndtable}
 }
-
-\def\starttabletwo{\begin{xtabular}{|p{.35\columnwidth}|p{.55\columnwidth}|}}
-\def\stoptabletwo{\end{xtabular}}
-\def\Rtwo #1|#2{ #1&#2}
-
-\def\starttableone{\begin{xtabular}{|p{1.1\columnwidth}|}}
-\def\stoptableone{\end{xtabular}}
