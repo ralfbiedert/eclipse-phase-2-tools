@@ -40,6 +40,56 @@ Additionally, player may take any number of automatic actions per action turn.
    High Gravity & - & See rules$^\dagger$.\\
 \end{eptable}
 
+
+\begin{figure}
+\begin{tikzpicture}
+
+% NEW PICTURE
+\node[anchor=south west, inner sep=0] (position) at (0,0) {\includegraphics[width=1\columnwidth]{gfx/combat-diagram-combined}};
+\begin{scope}[x={(position.south east)}, y={(position.north west)}]
+    \node at (0.08,0.915) {+20};   % Superior position
+    \node at (0.53,0.862) {-10 per WND / TRM};   % Wounded
+    \node at (0.77,0.862) {-30};   % In melee
+    \node at (0.182,0.725) {-10};   % vis min
+    \node at (0.28,0.70) {-20};   % vis maj
+    \node at (0.43,0.67) {-30 / 50\% miss};   % vis blind
+    \node at (0.74,0.67) {+10};   % target short
+    \node at (0.85,0.67) {+30};   % target long
+    \node[anchor=south west] at (0.15,0.585) {+10 or +\dv{1d10}};   % burst
+    \node[anchor=south west] at (0.15,0.518) {+30 or +\dv{2d10}};   % full auto
+
+    \node[anchor=south west] at (0.607,0.577) [align=left] {\scriptsize 2m};   % 2m
+    \node[anchor=south west] at (0.607,0.55) [align=left] {\scriptsize 10m};   % 2m
+    \node[anchor=south west] at (0.607,0.523) [align=left]{\scriptsize Range};   % 2m
+    \node[anchor=south west] at (0.607,0.498)[align=left] {\scriptsize Range * n};   % 2m
+    \node[anchor=south west] at (0.685,0.584) [align=left] {+10};   % 2m
+    \node[anchor=south west] at (0.757,0.56) [align=left] { 0 };   % 2m
+    \node[anchor=south west] at (0.822,0.537) [align=left]{ -10};   % 2m
+    \node[anchor=south west] at (0.89,0.50)[align=left] { -n10\\-nd10 };   % 2m
+
+    \node[anchor=south west] at (0.13,0.31) {-10};   % cover
+    \node[anchor=south west] at (0.18,0.31) {-10};   % cover
+    \node[anchor=south west] at (0.225,0.31) {-20};   % cover
+    \node[anchor=south west] at (0.275,0.31) {-30};   % cover
+    \node[anchor=south west] at (0.325,0.31) {50\%};   % cover
+
+    \node[anchor=south west] at (0.82,0.31) {-20};   % running
+
+    \node[anchor=south west] at (0.13,0.21) {-10};   % prone
+
+    \node[anchor=south west] at (0.175,-0.03) {-30};   % size
+    \node[anchor=south west] at (0.26,-0.03) {-10};   % size
+    \node[anchor=south west] at (0.40,-0.03) {0};   % size
+    \node[anchor=south west] at (0.57,-0.03) {+10};   % size
+    \node[anchor=south west] at (0.82,-0.03) {+30};   % size
+
+\end{scope}
+
+\end{tikzpicture}
+\caption{Common Attack Modifiers}
+\end{figure}
+
+
 \bigskip
 
 The basic combat sequence:
@@ -121,7 +171,21 @@ inflict additional damage (e.g, full instead of half). See rule book for details
 
 Also consult Social Modifiers table in the following chapter.
 
+\bigskip
+
+
 \pdfsnippet{gfx/combat-objects}
+
+
+\begin{eptable}{ X }
+   \rndheader{1}{Shooting Through Objects}
+   Ranged kinetic attacks do only $1/2$ damage after armor subtracted.\\
+   AoE kinetic, beam, energy attacks apply normal damage.\\
+   Electric devices \modifier{-10} per wound, or stop working totally.
+   Devices \modifier{-10} per wound, or stop working totally.
+   Simple objects \SI{.5}{m} hole per wound.
+\end{eptable}
+
 
 \bigskip
 
