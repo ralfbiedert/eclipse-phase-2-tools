@@ -1,7 +1,7 @@
 
 # Download
 
-![Latest Release](/gfx/latest-release.png)
+![Latest Release](/gfx/latest-release-r1.png)
 
 Eclipse Phase 2.0 tools & inspiration:
 
