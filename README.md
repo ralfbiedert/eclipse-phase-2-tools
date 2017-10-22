@@ -1,13 +1,12 @@
 
 # Download
 
-![Latest Release](/gfx/latest-release-r1.png)
+To download the latest PDF of the cheat sheet click the `Release` tab above or [FOLLOW THIS LINK](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases).
 
-Eclipse Phase 2.0 tools & inspiration:
 
-* Eclipse Phase 2.0 Cheat Sheet ([DOWNLOAD LATEST CHEAT SHEET](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases)).
-* Collection of EP related links and media.
+# Preview
 
+![Preview](/gfx/preview-cheat-sheet.jpg)
 
 
 # License
