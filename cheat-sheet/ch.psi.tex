@@ -18,7 +18,7 @@
    \rndheader{2}{Opposed Psi Test}
    Defender Wins Critical & Async locked out.\\
    Async Wins Critical & Double effect or damage, or half Psi armor.\\
-   Async Fails Critical & \sv{1d6 + strain} \& ruptured blood vessels.\\
+   Async Fails Critical & \dv{1d6 + strain} \textbf{physical} damage.\\
 \end{eptable}
 
 \begin{itemize}
@@ -64,4 +64,117 @@
 \begin{itemize}
     \itembox Multiple sleights might be sustained at same time, each incurring additional \modifier{-10}.
     \itembox Async must also stay within range.
+\end{itemize}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Pushing Sleights}
+    Increase Range & Touch becomes Close, Close \SI{20}{m}, Close (Async) \SI{30}{m}.\\
+    Increase Effect & Any modifiers are doubled.\\
+    Increase Power & Resisted by \skill{WIL}\,/\,2 instead of \skill{WIL}.\\
+    Increase Penetration & Psi Shield reduced by half.\\
+    Increase Duration & Double duration (temporary sleights only).\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox Pushing increases Infection Rating by additional \modifier{+5}. User automatically suffers \textbf{physical} strain of \dv{1d6\,+\,SM}.
+    \itembox In addition to Pushing effects a regular Infection Test is made, which might inflict more physical strain, or cause other strain effects.
+    \itembox Psi-Chi can be boosted as well. Boosting them lasts for \skill{WIL}\,+\,\SI{5}{min}.
+\end{itemize}
+
+
+\bigskip
+
+
+\begin{eptable}{ X }
+   \rndheader{1}{Infection Tests}
+   Test made every time Psi-Gamma sleight activates (or pushing Chi).\\
+   Target number equals current infection rating.\\
+   Success is bad: produces \num{1} strain, each superior +\num{1} strain.\\
+   Critical success even worse: \textit{Checkout time} or \textit{Interference}.\\
+   In any case infection rating increases after test made.\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox Checkout time: next long rest or unconscious situation infection may take over and acts with character without character knowing.
+    \itembox Interference: When in future making some test, do an opposed \skill{WIL} vs. \skill[+30]{Infection} before that. If infection wins, player suffers critical failure. Preferably during dramatic situations.
+    \itembox Each short rest reduces Infection Rating by \modifier{-10} (down to base). Each long rest resets Infection Rating to base.
+\end{itemize}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{General Strain Effects}
+   Breaking Point & Triggers existing disorder that lasts \dice{1d6} hours.\\
+   Physical Damage & Suffer \dv{1d6\,+\,SM (Strain Modifier)} \textbf{physical}.\\
+   Impulse Effect & Lasts \dice{1d6} min, resisting \skill{WIL} and \sv{1d6\,+\,SM}. \\
+   Compulsion Effect & Lasts \dice{1d6} hours. If not acted upon by end \sv{1d6\,+\,SM}.
+\end{eptable}
+
+\begin{itemize}
+    \itembox For actual Strain Effects roll on Async's Sub-Strain effects table. Sub-Strains might have additional effects not listed above.
+\end{itemize}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Architect Sub-Strain}
+   1 & Breaking Point.\\
+   2 & Physical Damage.\\
+   3 & Compulsion (Creation of something weird).\\
+   4 & Compulsion (Fascination about ALL aspects of thing or object, \textellipsis).\\
+   5 & Compulsion (Hoard weird things, organs, \textellipsis).\\
+   6 & Compulsion (Nest creation, hidden lair with traps, \textellipsis).\\
+\end{eptable}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Haunter Sub-Strain}
+   1 & Breaking Point.\\
+   2 & Physical Damage.\\
+   3 - 4 & Hallucinations that seem totally real to you.\\
+   5 & Haphephobia (Phobia of touch or being touched).\\
+   6 & Impulse (Avoidance against type of sensory input).\\
+\end{eptable}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Predator Sub-Strain}
+   1 & Breaking Point.\\
+   2 & Physical Damage.\\
+   3 & Impulse (Frenzy into melee combat).\\
+   4 & Impulse (Respond to and accept any challenge or threat).\\
+   5 & Impulse (Stand your ground, refuse to flee or surrender).\\
+   6 & Compulsion (Feast on anything that recently died. Raw.).\\
+\end{eptable}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Stranger Sub-Strain}
+   1 & Breaking Point.\\
+   2 & Physical Damage.\\
+   3 & Interference (like critical success on Infection Test).\\
+   4 & Compulsion (Deceptive behavior, thrill of manipulating, lying).\\
+   5 & Compulsion (Destructive behavior against self).\\
+   6 & Compulsion (Test limits how far you can go in conflict).\\
+\end{eptable}
+
+\bigskip
+
+\begin{eptable}{ l | X }
+   \rndheader{2}{Xenomorph Sub-Strain}
+   1 & Breaking Point.\\
+   2 & Physical Damage.\\
+   3 & Atavism, regress to animalistic behaviors.\\
+   4 & Compulsion (Alien home environment for must be sought out).\\
+   5 & Compulsion (Imprint on nearest person or object as mother or child).\\
+   6 & Compulsion (Hunger, sniff, taste everything around).\\
+\end{eptable}
+
+\begin{itemize}
+    \itembox Sub-strain effect list is gross oversimplification. Check rule book for detailed advice how strain acts and how to role play.
 \end{itemize}
