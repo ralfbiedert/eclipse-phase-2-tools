@@ -1,5 +1,7 @@
 
-# Content
+# Download
+
+![Latest Release](/gfx/latest-release.png)
 
 Eclipse Phase 2.0 tools & inspiration:
 
