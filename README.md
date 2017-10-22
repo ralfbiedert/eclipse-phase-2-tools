@@ -3,7 +3,9 @@
 
 ![Preview](/gfx/latest-release-r1.png)
 
-To download the latest PDF of the cheat sheet click the `Release` tab above or [FOLLOW THIS LINK](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases).
+To download the latest PDF of the cheat sheet click the `Release` tab above or [follow this link](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases).
+
+[DIRECT DOWNLOAD](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2017-10-22/ep2-cheat-sheet-2017-10-22.pdf)
 
 # Preview
 
