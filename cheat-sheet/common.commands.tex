@@ -39,3 +39,10 @@
 \def\etal{\latinabbrev{et al}}
 \def\etc{\latinabbrev{etc}}
 \def\ie{\latinabbrev{i.e}}
+
+
+\newenvironment{warning}
+  {\par\begin{mdframed}[linewidth=2pt,linecolor=red]%
+    \begin{list}{}{\leftmargin=1cm
+                   \labelwidth=\leftmargin}\item[\Large\ding{43}]}
+  {\end{list}\end{mdframed}\par}
