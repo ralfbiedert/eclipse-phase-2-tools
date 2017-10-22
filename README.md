@@ -7,7 +7,7 @@ To download the latest PDF of the cheat sheet click the `Release` tab above or [
 
 # Preview
 
-![Preview](/gfx/preview-cheat-sheet.png)
+![Preview](/gfx/preview-cheat-sheet-r1.jpg)
 
 
 # License
