@@ -34,3 +34,41 @@
 
 \setlength\parindent{0pt}
 \pagenumbering{gobble}
+
+
+
+% Add background picture
+\AddToShipoutPicture{
+\ifthenelse{\isodd{\value{page}}}%
+{
+    % If we are on an odd / front page
+    \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics{gfx/backgroundL.jpg}\vfill}}
+
+    \begin{tikzpicture}[remember picture, overlay]
+		% If we have two-column
+		\draw[fill=white,color=white,opacity=0.9] (1.2,0) rectangle (14.5, 290);;
+        \draw[fill=white,color=white,opacity=0.9] (15.5,0) rectangle (28.8, 290);;
+    \end{tikzpicture}%
+
+}{
+    % If we are on an even page
+    \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[width=\paperwidth,height=\paperheight]{gfx/backgroundR.jpg}\vfill}}
+
+    \begin{tikzpicture}[remember picture, overlay]
+		% If we have two-column
+		\draw[fill=white,color=white,opacity=0.9] (1.2,0) rectangle (14.5, 290);;
+        \draw[fill=white,color=white,opacity=0.9] (15.5,0) rectangle (28.8, 290);;
+    \end{tikzpicture}%
+}%
+}
+
+% hiermit erzwingen wir RGB-rendering und damit treffsicherere Farben, wenn transparenzen im Spiel sind
+\AddToShipoutPicture{%
+\makeatletter%
+\special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
+\makeatother%
+}
+
+
+\AtBeginShipout{%
+}
