@@ -6,5 +6,6 @@
 *.out
 *.gz
 *.xdv
+*.yaml
 cheat-sheet/*.pdf
 lost-transmission/*.pdf
