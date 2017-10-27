@@ -1,7 +1,7 @@
 
 # Download
 
-[![Download](/gfx/download.jpg)](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2017-10-22/ep2-cheat-sheet-2017-10-22.pdf)
+[![Download](/gfx/download.jpg)](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2017-10-27/ep2-cheat-sheet-2017-10-27.pdf)
 
 # Preview
 
