@@ -12,7 +12,7 @@
 
 % Base fancy Eclipse Phase box
 % https://tex.stackexchange.com/questions/78692/using-an-environ-environment-with-newenvironment
-\environbodyname\rndtablebody
+\environbodyname\eptablebody
 \NewEnviron{eptable}[1]{%
 
     \taburowcolors[2]{tablecolor!10 .. tablecolor!30}%
@@ -22,7 +22,7 @@
     % WTF DO I NEED '%' at the end of these lines since otherwise it will look ugly?
     \savebox{\tablebox}{%
         \begin{tabu}[h]{#1}%
-            \rndtablebody%
+            \eptablebody%
         \end{tabu}%
     }%
 
