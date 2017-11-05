@@ -2,6 +2,7 @@
 % TABLES
 \newsavebox{\tablebox}
 
+% TODO: Why does this give errors ("Misplaced \omit") if changed to "\newrobustcmd"?
 \newcommand{\epheader}[2]{%
     \multicolumn{#1}{c}{%
         \cellcolor{tablecolor}\color{white} #2%
