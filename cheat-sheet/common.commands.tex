@@ -10,7 +10,7 @@
 \newcommand\nobrkhyph{\mbox{-}}
 
 \newcommand{\dice}[1]{{#1}}
-\newcommand{\skill}[2][]{{\ifthenelse{\equal{#1}{}}{#2}{#2\,(\num[retain-explicit-plus]{#1})}}}
+\newcommand{\skill}[2][]{{\ifblank{#1}{#2}{#2\,(\num[retain-explicit-plus]{#1})}}}
 \newcommand{\modifier}[1]{{\num[retain-explicit-plus]{#1}}}
 \newcommand{\dv}[1]{{DV\,#1}}
 \newcommand{\sv}[1]{{SV\,#1}}
