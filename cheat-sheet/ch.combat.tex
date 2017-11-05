@@ -4,8 +4,11 @@
 \definecolor{tablecolor}{named}{eclipsered}
 
 
-
-Each combat turn takes \SI{3}{s}. In each turn the player can do either:
+Each \textbf{combat turn} (also called \textbf{action turn}) takes \SI{3}{s}.
+%
+In a single combat turn all characters act based on their \textbf{initiative}, going from high to low.
+%
+The player can then perform exactly \textbf{one} of the below:
 
 \begin{itemize}
     \itembox \num{1} complex and \num{1} quick action,
@@ -13,7 +16,7 @@ Each combat turn takes \SI{3}{s}. In each turn the player can do either:
     \itembox \num{3} quick actions.
 \end{itemize}
 
-Additionally, player may take any number of automatic actions per action turn.
+Additionally, player may take any number of automatic actions per combat turn.
 
 \bigskip
 
@@ -125,10 +128,22 @@ The basic combat sequence:
    Cone & See Cone Attack table.\\
    Helpless Target & Inflict maximum DV, no defense. Does not apply in combat.\\
    Called Shot & Attack with \modifier{-10}. On superior success see Called Shots table. \\
-   Shock Attack & Make \skill{REF+EA+Size}$^\dagger$ or \textit{incap.} 1 turn (+2 per sup. failure), \textit{stun.} \SI{3}{min}. On success stunned for 3 turns. \\
+   Shock Attack & Only affects bio morphs, not synths. Details below. \\
    Social Attack & Opposed test \skill{Provoke} vs \skill{WIL}. See table Social Attacks. \\
    2+ Weapons & Each weapon separate attack, cumulative \modifier{-20} after first. \\
 \end{eptable}
+
+\begin{itemize}
+    \itembox \textbf{Shock Attack}:
+    Inflict shock without damage in melee: \skill[+20]{Melee}. Inflict shock plus
+    damage requires is regular \skill{Melee}.
+    \textbf{When hit} with shock effect make \skill{SOM} check, apply
+    Energy Armor as positive modifier, if large \modifier{+30}, if small
+    \modifier{-30}. \textbf{Failure}: lost neuromuscular control, fall, incap. for \num{1} turn (\modifier{+2} per sup. fail) and stunned
+    for \SI{3}{min}. \textbf{Success}: stunned \num{3} turns.
+    %
+\end{itemize}
+
 
 \bigskip
 
