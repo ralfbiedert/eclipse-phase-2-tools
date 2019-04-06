@@ -4,7 +4,6 @@
 \definecolor{tablecolor}{named}{eclipsered}
 
 
-
 \begin{eptable}{ X }
    \epheader{1}{Wounds}
    Each wound causes cumulative \modifier{-10} on all tests, \modifier{-1} to initiative.\\
@@ -20,7 +19,9 @@
 
 \bigskip
 
-\pdfsnippet{gfx/health-stress}
+\begin{figure}[htbp!]%
+   \includegraphics[scale=0.82]{gfx/health-stress}%
+\end{figure}%
 
 \begin{eptable}{ l | X | X }
    \epheader{3}{First Aid}
@@ -67,7 +68,7 @@
    On failure receive stress as indiciated on table.\\
    On each trauma, take note of event on character sheet.\\
    Receiving \num{5} traumas w.o. receiving disorder, character hardens.\\
-   Hardening permanently removes \modifier{-5} to WIL or SAV.\\
+   Hardening permanently gives \modifier{-10} to WIL Checks and Persuade.\\
 \end{eptable}
 
 \begin{itemize}
@@ -98,7 +99,7 @@
 
 \begin{eptable}{ l | X }
    \epheader{2}{Disorders}
-   Addiction & Needs fix or receive negative modifier.\\
+   % Addiction & Needs fix or receive negative modifier.\\
    Alien Behavior Disorder & Prone to exhibiting alien behavior.\\
    Anxiety & Needs to be convinced to do almost anything.\\
    Atavism & Show primitive or animalistic behavior.\\
@@ -111,6 +112,7 @@
    Depression & Requires test to take any action. \\
    DPD & Separate personality. \\
    Fugue & Totally non-responsive. \\
+   Impulse Control & Engage in activity that controls thoughts. \\
    Insomnia & Long rests become short, no short. Bad perception.\\
    Narcissistic PD & Demand attention.\\
    Paramnesia & Recall memories not own, confused about self. \\

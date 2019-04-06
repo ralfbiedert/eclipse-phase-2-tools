@@ -9,7 +9,7 @@
     $Success\,\geq\,66$ & 2x Superior success.\\
     $Failure\,\leq\,66$ & Superior failure.\\
     $Failure\,\leq\,33$ & 2x Superior failure.\\
-    00, \num{11}, \ldots \num{99} & Critical. Supersedes superior. 00, \num{99} always success / failure.\\
+    00, \num{11}, \ldots \num{99} & Critical. Supersedes superior. 00 always success / \num{99} failure.\\
 \end{eptable}
 
 $Success\,\geq\,33$ means the player rolled a success
@@ -35,11 +35,11 @@ Players can chose two effects, or same effect twice on double superior.
 
 \begin{eptable}{ X }
    \epheader{1}{Criticals}
-   Double damage or half target's armor (GM choice). \\
+   Double damage on attack. \\
    Gain $\pm\,20$ on next test. \\
    Take (success) or lose (failure) next action. \\
    Break weapon or tool (failure). \\
-   Regain \num{1} Insight, Moxie, Vigor (success). \\
+   % Regain \num{1} Insight, Moxie, Vigor (success). \\
    Any other appropriate \textit{wow!} moment.\\
 \end{eptable}
 
@@ -70,13 +70,28 @@ As always, the GM is encouraged to be creative.
 \end{eptable}
 
 
-\pdfsnippet{gfx/dice-modifiers}
-\pdfsnippet{gfx/dice-skills}
+\begin{itemize}
+ \itembox Trying again induces cumulative \num{-10} modifier. GM may decide trying again not possible.
+\end{itemize}
+
+
+\begin{figure}[htb!]%
+   \includegraphics[scale=0.95]{gfx/dice-modifiers}%
+\end{figure}%
+
+\begin{figure}[htb!]%
+   \includegraphics[scale=1.1]{gfx/dice-skills-ranges}%
+\end{figure}%
+
+\begin{figure}[htb!]%
+   \includegraphics[scale=1.3]{gfx/dice-skills}%
+\end{figure}%
+
 
 
 
 \begin{eptable}{ l | X }
-   \epheader{2}{Complimentary Know Skills}
+   \epheader{2}{Complementary Know Skills}
    \num{40} - \num{59} & Modifier \modifier{+10} for active skill.\\
    \num{60} - \num{79} & Modifier \modifier{+20} for active skill.\\
    \num{80}+ &  Modifier \modifier{+30} for active skill.\\
@@ -84,7 +99,7 @@ As always, the GM is encouraged to be creative.
 
 
 \begin{itemize}
- \itembox Complimentary skill bonuses are granted if an appropriate
+ \itembox Complementary skill bonuses are granted if an appropriate
     Know skill is used to supplement an Active skill.
   \itembox This \textbf{only} applies if the Active skill does not
     incorporate the knowledge of the Know skill already. For example

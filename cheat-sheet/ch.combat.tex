@@ -52,7 +52,7 @@ Additionally, player may take any number of automatic actions per combat turn.
 \begin{scope}[x={(position.south east)}, y={(position.north west)}]
     \node at (0.08,0.915) {+20};   % Superior position
     \node at (0.53,0.862) {-10 per WND / TRM};   % Wounded
-    \node at (0.77,0.862) {-30};   % In melee
+    \node at (0.77,0.862) {-10 / -30};   % In melee
     \node at (0.182,0.725) {-10};   % vis min
     \node at (0.28,0.70) {-20};   % vis maj
     \node at (0.43,0.67) {-30 / 50\% miss};   % vis blind
@@ -105,13 +105,23 @@ The basic combat sequence:
     \itembox \textbf{Make Opposed Tests}. Both opponents roll.
     \itembox \textbf{Determine Result}. Handled as opposed test. Per attacker \textbf{superior success} inflict \dv{1d6} more. If \textbf{attacker critical} double damage or half target's armor (GM choice).
     \itembox \textbf{Roll Damage}. Also apply any special damage weapon might cause.
-    \itembox \textbf{Apply Armor}. Subtract remaining armor from damage. \textbf{Armor piercing} halves target armor. \textbf{Critical armor piercing} fully ignores armor.
+    \itembox \textbf{Apply Armor}. Subtract remaining armor from damage. \textbf{Armor piercing} halves target armor.
     \itembox \textbf{Apply Damage}. Record damage. If accumulated damage exceeds Durability target incapacitated. If exceeds Death Rating target destroyed.
     \itembox \textbf{Determine Wounds}. Each multiple above Wound Threshold inflicts wound.
 \end{itemize}
 
 
-\pdfsnippet{gfx/combat-combined}
+
+% \begin{figure}[h!]%
+%    \includegraphics[scale=1.0]{gfx/combat-combined-fire-mod}%
+% \end{figure}%
+
+\begin{figure}[h!]%
+   \includegraphics[scale=0.75]{gfx/combat-melee-modifiers}%
+\end{figure}%
+
+% \pdfsnippet{gfx/combat-combined}
+
 
 \subsection*{Surprises}
 
@@ -130,6 +140,7 @@ The basic combat sequence:
    Called Shot & Attack with \modifier{-10}. On superior success see Called Shots table. \\
    Shock Attack & Only affects bio morphs, not synths. Details below. \\
    Social Attack & Opposed test \skill{Provoke} vs \skill{WIL}. See table Social Attacks. \\
+   Sweeping Attack & With beam attack treat miss as aim +10 for next round. \\
    2+ Weapons & Each weapon separate attack, cumulative \modifier{-20} after first. \\
 \end{eptable}
 
@@ -189,9 +200,9 @@ Also consult Social Modifiers table in the following chapter.
 
 \bigskip
 
-
-\pdfsnippet{gfx/combat-objects}
-
+\begin{figure}[h!]%
+   \includegraphics[scale=0.71]{gfx/combat-objects}%
+\end{figure}%
 
 \begin{eptable}{ X }
    \epheader{1}{Shooting Through Objects}
@@ -214,7 +225,7 @@ Also consult Social Modifiers table in the following chapter.
    Grappled & No action (even Fray) except Melee / SOM \modifier{-30} to escape.\\
    Incapacitated & No action whatsoever (not even defensive).\\
    Impaired & Suffer \modifier{-10}, \modifier{-20}, \modifier{-30}, depending on condition. \\
-   Paralyzed & No physical action (not even defensive). Mental / Mesh allowed. \\
+   % Paralyzed & No physical action (not even defensive). Mental / Mesh allowed. \\
    Prone & Quick action to get up. Melee opponent \modifier{+20}, ranged \modifier{-10}.\\
    Stunned & Suffer \modifier{-30} physical, \modifier{-10} mental.\\
    Unconscious & Helpless. Treat bios w. stim, cases w. \skill[-30]{INT} if DV < DUR.\\
@@ -230,14 +241,21 @@ Conditions can be set by weapons or circumstances.
    Armor Piercing & Inflicts \dv{-1d10}, but halves armor.\\
    Blinding & No anti-glare: \skill{REF} or blind \num{1} turn$^\dagger$. Perm. on crit.\\
    Concealable & Receive \modifier{30} for Infiltration hiding weapon.\\
+   Entangling & Make \skill{REF} or be grappled. Superior attacks give \modifier{-10}.\\
    Fixed & Needs stand or be prone, otherwise \modifier{-20} to attack.\\
+   Fragile & Item breaks or becomes unusable on superior fail.\\
    Knockdown & Target \skill{REF} or be knocked down.\\
-   No Smartlink & Receive \modifier{-10} to attack.\\
-   No Point-Blank / Close & No modifiers at point-blank; or may not fire.\\
+   Lacks Smartlink & Receive \modifier{-10} to attack.\\
+   Long & Give \modifier{-30} when firing in melee, no +10 on point blank.\\
+   No Close & Cannot be used close or at point-blank.\\
+   No Point-Blank & Cannot be used at point-blank.\\
    Pain & Target \skill{WIL} or flee \num{1} turn, \modifier{-20} to next action$^\dagger$.\\
    Paralyzing & Target \skill{REF} or paralyzed, \skill[-30]{REF} on sup. attack.\\
    Shock & Inflicts shock effect.\\
+   Single Use & Can only be used once.\\
+   Steady & Ignores range modifiers.\\
    Stun & Target \skill{SOM} or stunned$^\dagger$.\\
+   Touch Only & Requires a touch to hit, +20, but no DV inflicted.\\
    Two-Handed & Needs two hands, or \modifier{-20} used with one.\\
 \end{eptable}
 
