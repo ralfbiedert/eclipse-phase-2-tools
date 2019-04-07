@@ -12,16 +12,23 @@
    Hidden Tags & At least \skill{Interface} test at \modifier{-30} to find, maybe impossible.\\
    List Public Devices & Trivial activity.\\
    List Stealthed Devices & Opposed \skill{Interface} test at \modifier{-30} for searcher.\\
-   Overloaded Devices & Up to \modifier{-30} if app exceeds device, or device impaired.\\
-   Sniffing & Needs \textit{Sniffer} app, \skill{Hacking} test.\\
+   Privacy Mode & Applies \modifier{-30} to tracking, might be illegal or frowned.\\
+   Sniffing WiFi & Needs \textit{Sniffer} app, \skill{Hacking} test.\\
+   Sniffing Laser & Needs to be in optical path.\\
+   Sniffing Cabled & Needs hardware access.\\
    Sniffing VPNs & Applies \modifier{-30}, only valid for \dice{1d6} minutes.\\
-   Sniffing, Detecting & Defender may make \skill{Infosec} test to detect every minute. \\
+   Sniffing Detection & Defender may make \skill{Infosec} test to detect every minute. \\
 \end{eptable}
+
+Selection of mesh actions that don't require a server account and have rules mentioned in the core book.
+There are many other common mesh use cases (AR, VR, XP, Banking, Comms, Office, Networking, \ldots).
 
 \bigskip
 
 \subsection*{Accounts and Access}
 
+These actions and rules are primarily concerned with systems (motes, hosts, servers) that have some sort of accounts,
+and users that have gained or stolen access to these systems.
 
 \begin{eptable}{ l | X }
    \epheader{2}{Accounts}
@@ -33,47 +40,6 @@
 \end{eptable}
 
 \bigskip
-
-\begin{eptable}{ l | X }
-   \epheader{2}{Authentication Methods}
-   % Addiction & Needs fix or receive negative modifier.\\
-   Biometric Scan & Fingerprint, DNA, retina scan, \ldots\\
-   Ego Scan & Brainwave scan with special device.\\
-   Direct Neural Interface & Requires special brain implant.\\
-   Mesh ID & Just needs the right mesh ID.\\
-   Other Account & Account A might grant access to account B.\\
-   Passcode & Some secret string, aka \textit{password}.\\
-   Passkey & Special physical security token.\\
-   Quantum Key & Require passcode delivered on highly secure channel.\\
-\end{eptable}
-
-\bigskip
-
-\begin{eptable}{ l | X }
-   \epheader{2}{Circumventing Authentication}
-   % Addiction & Needs fix or receive negative modifier.\\
-   Acquiring Credentials & Get access to actual credential.\\
-   Forging Authentication & Might require multiple tests and lengthy times.\\
-   Spoofing & Take over connection, see below.\\
-\end{eptable}
-
-\begin{itemize}
-   \itembox To spoof, first monitor active connection with sniffer.
-   \itembox Then take over victim's client with \skill{Hacking} test, complex action. This \textit{only} allows sending. Victim VPN gives \modifier{-30}, Firewall can detect. To also take over victim's server for full-duplex, similar \skill{Hacking} test must succeed.
-\end{itemize}
-
-\bigskip
-
-
-\begin{eptable}{ l | X }
-   \epheader{2}{Crypto}
-   % Addiction & Needs fix or receive negative modifier.\\
-   Public Key & Can be broken with quantum computer, \skill{Infosec} (1 week) task.\\
-   Quantum & Cannot be broken, always requires key.\\
-\end{eptable}
-
-\bigskip
-
 
 \begin{eptable}{ l | X }
    \epheader{2}{Universal Actions}
@@ -135,6 +101,31 @@
     Wipe System & Takes 1 to 10 minutes (double for secure wipe).\\
 \end{eptable}
 
+\bigskip
+
+\begin{eptable}{ l | X }
+   \epheader{2}{Authentication Methods}
+   % Addiction & Needs fix or receive negative modifier.\\
+   Biometric Scan & Fingerprint, DNA, retina scan, \ldots\\
+   Ego Scan & Brainwave scan with special device.\\
+   Direct Neural Interface & Requires special brain implant.\\
+   Mesh ID & Just needs the right mesh ID.\\
+   Other Account & Account A might grant access to account B.\\
+   Passcode & Some secret string, aka \textit{password}.\\
+   Passkey & Special physical security token.\\
+   Quantum Key & Require passcode delivered on highly secure channel.\\
+\end{eptable}
+
+\bigskip
+
+
+\begin{eptable}{ l | X }
+   \epheader{2}{Crypto}
+   % Addiction & Needs fix or receive negative modifier.\\
+   Public Key & Can be broken with quantum computer, \skill{Infosec} (1 week) task.\\
+   Quantum & Cannot be broken, always requires key.\\
+\end{eptable}
+
 
 % \bigskip
 
@@ -155,11 +146,11 @@
 \subsection*{Searches}
 
 \begin{itemize}
-   \itembox Looking up common information on mesh is instant and does not require roll.
-   \itembox Searches for non-common information on local mesh have timeframe of \SI{1}{h}, and might be complemented by appropriate \skill{Know} skill. Searches outside of the local mesh increase time frame due to distance lag.
-   \itembox Superior successes provide more nuanced information, critical success leads to breakthrough understanding, critical failure to false or misleading information.
+   \itembox \textbf{Common Information}. Instant and does not require roll.
+   \itembox \textbf{Uncommon Information}. On local mesh have timeframe of \SI{1}{h}, and might be complemented by appropriate \skill{Know} skill. Searches outside of the local mesh increase time frame due to distance lag.
+   \itembox \textbf{Private Information}. (Located on specific host or sub-net) requires appropriate access and has special time frame (see table). Encrypted files must be decrypted before they can be searched.
+   \itembox \textbf{Superior successes}. provide more nuanced information, \textbf{critical success} leads to breakthrough understanding, \textbf{critical failure} to false or misleading information.
    \itembox \skill{Research} only yields information. Understanding data might require \skill{Know} test or similar.
-   \itembox Searching non-public information (located on specific host or sub-net) requires appropriate access and has special time frame (see table). Encrypted files must be decrypted before they can be searched.
 \end{itemize}
 
 
@@ -175,8 +166,8 @@
 \subsection*{Physical Tracking}
 
 \begin{itemize}
-   \itembox Physical tracking by mesh ID is \skill{Research} and can yield location of target and is instant. If they are in private mode \modifier{-30} modifer, opposed vs \skill{Infosec} if they cycle mesh IDs, timeframe \SI{1}{h}.
-   \itembox Biometrical tracking is handled as \skill{Perceive} or \skill{Research}, possibly opposed by \skill{Infiltrate} or \skill{Disguise}.
+   \itembox \textbf{Via Mesh ID}. \skill{Research} and can yield location of target and is instant. If they are in private mode \modifier{-30} modifer, opposed vs \skill{Infosec} if they cycle mesh IDs, timeframe \SI{1}{h}.
+   \itembox \textbf{Via Biometrics}. Handled as \skill{Perceive} or \skill{Research}, possibly opposed by \skill{Infiltrate} or \skill{Disguise}.
 \end{itemize}
 
 
@@ -187,16 +178,17 @@
 \subsection*{Mesh Tracking}
 
 \begin{itemize}
+   \itembox \textbf{Live Activity Tracking}. Generally difficult (\skill{Research} at \modifier{-30}) or impossible even if mesh ID is known. Better approach is to sniff traffic or hack their PAN. Tracking activity on particular system can be done with elevated accounts.
+   \itembox \textbf{Countermeasures}. Burner mesh IDs, disposable Ectos, VPNs, anonymizing proxies and spoofing mesh IDs.
    \itembox Public information easily accessible, private info might require \skill{Research} scraping at \modifier{-30}, favors, or special database access.
-   \itembox Live activity tracking can generally be difficult (\skill{Research} at \modifier{-30}) or impossible even if mesh ID is known. Better approach is to sniff traffic or hack their PAN. Tracking activity on particular system can be done with elevated accounts.
-   \itembox Countermeasures are burner mesh IDs, disposable Ectos, VPNs, anonymizing proxies and spoofing mesh IDs.
 \end{itemize}
 
 
-\subsection*{Intrusion}
+\subsection*{Breaking In}
 
 \begin{eptable}{ l | X }
    \epheader{2}{Ways of Hacking}
+   Acquiring Credentials & Get access to actual credential.\\
    Circumvent Authentication & Gain or forge access tokens.\\
    Spoofing & Intercept traffic and impersonate user.\\
    Intrusion & Find exploits to gain access.\\
@@ -204,35 +196,49 @@
 
 \bigskip
 
+% \begin{eptable}{ l | X }
+%    \epheader{2}{Circumventing Authentication}
+%    % Addiction & Needs fix or receive negative modifier.\\
+%    Acquiring Credentials & Get access to actual credential.\\
+%    Forging Authentication & Might require multiple tests and lengthy times.\\
+%    Spoofing & Take over existing user connection, see below.\\
+%    Intrusion & Exploit system weakness, see chapter below.\\
+% \end{eptable}
+
 \begin{itemize}
-   \itembox Intrusion first requires a direct connection, either wirelessly (need to know target mesh ID), via an access port, or via tapping into a cable (\skill{Hardware: Electronics}).
-   \itembox Brute force hacking is complex action, Hacking test, at \modifier{-30}. If successful get user access level (each superior upgrades access level). Attacker is in \textit{spotted} status, system goes into alert. On critical success \textit{covert} status.
-   \itembox Subtle hacking has \SI{1}{h} task action, success grants user access level.
+   \itembox Credentials usually do not raise alert. Spoofing or Intrusion might.
+   \itembox \textbf{Hacking Basics}. Usually opposed roll between attacker \skill{Infosec} and system \skill{Firewall} (default protection) or defender \skill{Infosec} (if actively protected).
+   \itembox \textbf{Spoofing}. Monitor active connection of existing user with sniffer. Then take over victim's client with \skill{Hacking} test, complex action. This \textit{only} allows sending. Victim VPN gives \modifier{-30}, Firewall can detect. To also take over victim's server for full-duplex, similar \skill{Hacking} test must succeed.
+   \itembox \textbf{Intrusion Requirements}. Requires a direct connection to target, either wirelessly (need to know target mesh ID), via an access port, or via tapping into a cable (\skill{Hardware: Electronics}).
+   \itembox \textbf{Intrusion (Brute Force)}. Complex action, opposed \skill{Hacking} at \modifier{-30}. If successful get user access level (1 superior gives security account, 2 give admin account). If successful attacker gets \textbf{spotted} status, system goes into \textbf{active alert}. On critical success \textbf{covert} status and \textbf{passive alert}. On failure no access and system goes \textbf{passive alert}.
+   \itembox \textbf{Intrusion (Subtle)}. Takes \SI{1}{h} or longer task action. Success grants user access level (1 superior gives security account, 2 give admin account) and \textbf{covert status}. On critical success \textbf{hidden}. If firewall succeeds its roll (regardless whether it still loses opposed test) \textbf{passive alert} triggered.
+   \itembox Remember to take time, use pools to redo rolls, or get extra mesh actions.
 \end{itemize}
 
-\begin{figure}[htbp!]%
-   \includegraphics[scale=1.0]{gfx/mesh-hacking}%
-\end{figure}%
+% \begin{figure}[htbp!]%
+%    \includegraphics[scale=1.0]{gfx/mesh-hacking}%
+% \end{figure}%
 
 
 \begin{figure}[htbp!]%
    \includegraphics[scale=1.0]{gfx/mesh-firewall}%
 \end{figure}%
 
+\subsection*{Status \& Countermeasures}
 
 \begin{eptable}{ l | X }
    \epheader{2}{Intruder Status}
-    Hidden & System completely unaware. Get +10 to subvert system.\\
+    Hidden & System completely unaware, no logs, +10 to subvert system.\\
     Covert & System aware of presence, but does not consider threat.\\
-    Spotted & System considers threat, launches countermeasures.\\
+    Spotted & System considers threat, active alert, launches countermeasures.\\
 \end{eptable}
 
 \bigskip
 
 \begin{itemize}
-   \itembox Can spend complex action \skill{Hacking} to try to upgrade status. Does not erase logs, but makes harder to pinpoint attacker.
-   \itembox Any \skill{Infosec} while within system risks exposure. Superior failure triggers passive alert, critical failure spotted status.
-   \itembox To pinpoint intruder on passive alert, system may do opposed \skill{Infosec} against intruder. If successful, system goes active alert.
+   \itembox \textbf{Upgrade Status}. Can spend complex action \skill{Hacking}. Superior gives improves status by extra step. Does not erase logs or lower alert, but makes harder to pinpoint attacker.
+   \itembox \textbf{Downgrade Status}. Any \skill{Infosec} while within system risks exposure, superior failure triggers \textbf{passive alert}, critical failure \textbf{spotted status}.
+   \itembox \textbf{Zero In}. To take action against attacker, system needs to zero in. Pinpointing intruder on passive alert as opposed \skill{Infosec} against intruder. System suffers \modifier{-30} if intruder hidden. If successful, attacker \textbf{spotted}, system goes \textbf{active alert}.
 \end{itemize}
 
 
@@ -295,19 +301,19 @@
    Tap Senses & Tap into cyberbrain or mesh insert senses. \\
 \end{eptable}
 
-\bigskip
-
-Subversion is usually handled as \skill{Hacking} test.
+Subversion are all activities that either try to bypass current permissions,
+\textbf{or would generally be considered \textit{negative}} by defending firewall.
+Usually handled as opposed \skill{Hacking} test.
 
 \subsection*{Mesh Combat}
 
 \begin{itemize}
-   \itembox Works somewhat like regular combat. \textbf{Local attacks} require access and account on system and can attack entities on system. \textbf{Remote attacks} attack operating systems of remote devices, but cannot attack infomorphs, cyberbrains, or software running on them.
-   \itembox Attack is complex \skill{Infosec}. If local attack and you do not have admin, you suffer \modifier{-30}. If system is shielding, opposed \skill{Infosec} roll. Remote attacks are opposed by \skill{Firewall} or defender \skill{Infosec}.
-   \itembox Attacks are not obvious but rather glitches. Victim can't fight back unless \skill{Infosec} complex action to identify attacker.
-   \itembox Mesh damage is \dice{2d10}, added \dice{1d6} per superior, double for critical.
-   \itembox Wound mechanic similar to regular wounds, including cumulative \modifier{-10} modifier. Each wound causes cumulative \SI{10}{\%} chance for system glitch.
-   \itembox Apps can't heal and need to restart. Infomorphs and others heal \dice{1d10} or 1 wound per minute.
+   \itembox \textbf{Attacking (Local)}. Require access and account on system and can attack entities on system. In particular when \textbf{fighting active shell of spotted intruder} by system firewall or defender. Complex action \skill{Infosec} (\modifier{-30} if without admin account). If system shielded, opposed roll instead against \skill{Infosec}.
+   \itembox \textbf{Attacking (Remote)}. Against operating systems of remote devices, but cannot attack infomorphs, cyberbrains, or software running on them. Opposed \skill{Infosec} against \skill{firewall} or defender's \skill{Infosec}.
+   \itembox \textbf{Awareness}. Attacks not obvious to victim, look like glitches. Can't fight back unless aware, and \skill{Infosec} complex action to identify attacker. Attacks also require successful \skill{Hacking} test, or system goes into \textbf{passive alert}.
+   \itembox \textbf{Damage}. Roll \dice{2d10}, add \dice{1d6} per superior, double for critical.
+   \itembox \textbf{Wounds}. Like regular wounds if damage exceeds threshold. Induce cumulative \modifier{-10} modifier. Each wound causes cumulative \SI{10}{\%} chance for system glitch.
+   \itembox \textbf{Healing}. Apps can't heal and need to restart. Infomorphs and others heal \dice{1d10} or 1 wound per minute.
 \end{itemize}
 
 \bigskip
@@ -325,3 +331,15 @@ Subversion is usually handled as \skill{Hacking} test.
 \begin{figure}[htb!]%
    \includegraphics[scale=1.0]{gfx/mesh-combat}%
 \end{figure}%
+
+
+\subsection*{Counter-Surveillance}
+
+\begin{itemize}
+   \itembox \textbf{Detecting Sensors}. Many sensors radiate WiFi publically, private ones can be triangulated with \skill{Interface} (\modifier{-30}). \skill{Perception} (up to \modifier{-30}) to see sensors, depending on if active or passive.
+   \itembox \textbf{Hacking Sensors}. Single sensor like regular hacking. Mass hacking can work, as motes have bad security. Treat as \textbf{consolidated hacking} with \modifier{-10} per \num{5} sensors.
+   \itembox \textbf{Avoiding Recognition}. Use devices like shrouds, invisibility cloaks, masks, chameleon skin, disguises, and many more. Might yield opposed \skill{Infiltrate} or \skill{Disguise} against system's \skill{Perceive} (applying negative modifiers).
+   \itembox \textbf{Disabling Sensors}. Jam to prevent certain sensors from transmitting, not necessarily recording though. Permanently disables sensors via EMP or similar until replaced. Alternatively, carefully removing sensors if task \skill{Perception} roll if you don't mind to be seen, or \skill{Infiltrate} with double time frame to do covertly. Spy nanoswarms require separate cleaning with guardian swarms.
+   \itembox \textbf{Dead Zones \& Route Mapping}. Many places have no sensor coverage due to age, environment, vandalism. Route mapping (finding a dead zone path) treated as task \skill{Infiltrate} with modifiers based on area. Black market might sell \textit{dead zone maps}.
+   \itembox \textbf{Skipjacking}. Moving while under surveillance without raising suspicion is \skill{Infiltrate} with modifiers based on area, opposed by \skill{Perceive}.
+\end{itemize}
