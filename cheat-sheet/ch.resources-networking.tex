@@ -4,33 +4,62 @@
 \definecolor{tablecolor}{named}{eclipsered}
 
 
+\subsection*{Getting Gear}
 
-\begin{eptable}{ l | X }
-   \epheader{2}{Resource Trait}
-   Level 1 & Acquire Minor gear in appropriate time frame.\\
-   Level 2 & Acquire Moderate gear in appropriate time frame.\\
-   Level 3 & Acquire Major gear in appropriate time frame.\\
-   Level 4 & Acquire even rare and restricted items (pending GM).\\
+\begin{eptable}{ X }
+   \epheader{1}{Before Missions}
+   Regular mission has 20 GP and 6 MP, but adjust accordingly.\\
+   GP can only be spent in mission prep phase, can't be saved.\\
+   Resource trait level adds to GP.\\
+   Favors can be traded for 1 to 3 GP, if rep 40+ and appropriate.\\
 \end{eptable}
 
-\begin{itemize}
-    \itembox In general cases it is just a matter of
-    waiting. In special cases a \skill{Persuation} test may be needed.
-    \itembox At Level 3 and Level 4 can be used with Flex to immediately
-            acquire Moderate items and introduce them to the scene.
-    \itembox High traits can also be used as bribing modifier in
-        certain situations. Apply \modifier{+10} per level of trait.
-    \itembox Resource trait also reflects player's general life style.
-    \itembox Changes in trait due to gameplay should be counter-balanced by Rez cost or award.
-\end{itemize}
+\bigskip
+
+\begin{eptable}{ X }
+   \epheader{1}{During Missions}
+   Spend regular rep favors for gear (minor to major).\\
+   Use resource trait to buy.\\
+   Find and use nanofabricator to build if blueprints available.\\
+\end{eptable}
+
+\bigskip
 
 \begin{eptable}{ l | X }
-   \epheader{2}{Lifestyle}
+   \epheader{2}{Resource Trait During Missions}
+   Level 1 & Up to 2 GP per week on minor items.\\
+   Level 2 & Up to 3 GP per week on minor or moderate items.\\
+   Level 3 & Up to 5 GP per week on any complexity.\\
+   Level 4 & Same as Level 3, but also rare or restricted (pending GM).\\
+\end{eptable}
+
+\bigskip
+
+\begin{figure}[htb!]%
+   \includegraphics[scale=0.95]{gfx/resources-rep-gearpoints}%
+\end{figure}%
+
+\begin{itemize}
+    \itembox \textbf{Time.} In general cases it is just a matter of
+    waiting. In special cases a \skill{Persuation} test may be needed. Acquiring multiple items combines time frame.
+    \itembox \textbf{Blueprints.} When acquiring gear, chose between actual item or single-use blueprint. Multi-use blueprints are available, but increase complexity by one step. Regular blueprints are assumed to come with one physical copy.
+    \itembox \textbf{Flex.} At Level 3 and Level 4 can be used with Flex to immediately
+            acquire Moderate items and introduce them to the scene.
+    \itembox \textbf{Bribing.} High traits can also be used as bribing modifier in
+        certain situations. Apply \modifier{+10} per level of trait.
+\end{itemize}
+
+\bigskip
+
+
+\begin{eptable}{ l | X }
+   \epheader{2}{Resource Trait \& Life Style}
    Level 1 & Own cubicle in a beehive hab or a small apartment.\\
    Level 2 & Private residence or a condo. Small vehicle.\\
    Level 3 & Large residential complex or multiple homes, one or more vehicles.\\
    Level 4 & Rich, might own a small private hab and even shuttle.\\
 \end{eptable}
+
 
 \bigskip
 
@@ -54,21 +83,6 @@
 
 
 \begin{eptable}{ l | X }
-   \epheader{2}{Ways to Acquire Gear}
-   Rep & Succeed on Rep test and use appropriate favor.\\
-   Resource Trait & Use your resources to buy it.\\
-   Fabricator & Needs blueprints and access to fabber.\\
-\end{eptable}
-
-\begin{itemize}
-    \itembox Using Rep to acquire an item uses a favor of the
-    equivalent level (\eg, Minor item for Minor favor).
-\end{itemize}
-
-\bigskip
-
-
-\begin{eptable}{ l | X }
    \epheader{2}{Acquisition Time Frame}
    Digital Only & \num{1} minute.\\
    Minor & \num{2} hours.\\
@@ -77,38 +91,15 @@
    Rare, Restricted & GM choice.\\
 \end{eptable}
 
-\begin{itemize}
-    \itembox When acquiring gear, chose between actual item or single-use blueprint.
-    \itembox Multi-use blueprints are available, but increase complexity by one step.
-    \itembox Regular blueprints are assumed to come with one physical copy.
-    \itembox Acquiring multiple items combines time frame.
-    \itembox When not under time pressure, players should be able
-        to acquire regular gear they would have regular access to
-        without test.
-\end{itemize}
 
-\bigskip
+\subsection*{Reputation Networks}
 
-\begin{eptable}{ l | X }
-   \epheader{2}{Rep Modifiers}
-   Trivial Favor & Reputation test \modifier{+30}, or no test when Rep 60+.\\
-   Minor & Reputation test \modifier{+10} \\
-   Moderate & Reputation test \modifier{+0} \\
-   Major & Reputation test \modifier{-30} \\
-\end{eptable}
+\begin{figure}[htbp!]%
+   \includegraphics[scale=1]{gfx/resources-rep-cost}%
+\end{figure}%
 
 \begin{itemize}
-    \itembox Reputation is rolled like a skill would be rolled with the value in the network.
-\end{itemize}
-
-\begin{eptable}{ l | l | X }
-   \epheader{3}{Rep Refresh \& Burning }
-   Trivial Favor & - & Any time, no limits. \\
-   Minor Favor & 5 rep to burn & \num{3} times per week. \\
-   Moderate Favor & 10 rep to burn & Once per week. \\
-   Major Favor & 20 rep  to burn & Once per campaign. \\
-\end{eptable}
-
-\begin{itemize}
-    \itembox Favor is not lost on failed test unless critical failure is rolled.
+    \itembox \textbf{Rolling Rep}. Look up favor type, apply modifiers and make test in appropriate network. Favor is not lost on failed test unless critical failure is rolled.
+    \itembox \textbf{Burning Rep}. Can burn rep to either get favor spent, or get bonus on roll equal to $2x$ the rep burned.
+    \itembox \textbf{Keeping Quiet}. For each -X on roll, opponent gets -X to trace.
 \end{itemize}
