@@ -3,7 +3,7 @@
 \DefineNamedColor{named}{eclipsered}{rgb}{0.586,0.466,0.682}
 \definecolor{tablecolor}{named}{eclipsered}
 
-\subsection*{Basics}
+\subsection*{Invoking}
 
 
 \begin{eptable}{ l | X }
@@ -17,14 +17,14 @@
 
 \begin{eptable}{ l | X }
    \epheader{2}{Opposed Psi Test}
-   Defender Wins Critical & Async locked out.\\
-   Async Wins Critical & Double effect or damage, or half Psi armor.\\
-   Async Fails Critical & \dv{1d6 + strain} \textbf{physical} damage.\\
+   Defender Wins Critical & Async locked out until recharge.\\
+   Async Wins Critical & Double effect or damage.\\
+   Async Fails Critical & \dv{1d6} \textbf{physical} damage.\\
 \end{eptable}
 
 \begin{itemize}
-    \itembox Target opposes with \skill{WIL}. May go full psychic defense as complex action to gain \modifier{+30}.
-    \itembox Target aware \textit{something} is happening every time it wins its Psi test.
+    \itembox \textbf{Resisting}. Target opposes with \skill{WIL}. May go full psychic defense as complex action to gain \modifier{+30}. Unconscious may not resist.
+    \itembox \textbf{Awareness}. Target aware \textit{something} is happening every time it wins its part of Psi test.
     However, very unlikely it understands that targeted by Psi unless Async itself.
 \end{itemize}
 
@@ -67,7 +67,7 @@
    \epheader{2}{Duration}
    Constant & Always on.\\
    Instant & Immediate and permanent.\\
-   Temporary & Lasts \skill{WIL} + 5 time units, as defined in sleight.\\
+   Temporary & Lasts \skill{WIL} / 5 time units, as defined in sleight.\\
    Sustained & Requires concentration, \modifier{-10} to Async for duration.\\
 \end{eptable}
 
@@ -89,9 +89,9 @@
 \end{eptable}
 
 \begin{itemize}
-    \itembox Pushing doubles Infection Rating. User also automatically suffers \dv{1d6}.
-    \itembox Psi-Chi can be boosted as well. Infection rating raises by \num{5} and causes Infection test. Boosting them lasts for \skill{WIL}\,+\,\SI{5}{min}.
-    \itembox Avoiding an infection test when pushed costs \num{2} moxie.
+    \itembox \textbf{Doubles Infection Rating} when pushing. User also suffers \dv{1d6}.
+    \itembox \textbf{Psi-Chi Pushing}. Infection rating raises by \num{5} and causes Infection test. Boosting them lasts for \skill{WIL}\,/\,\SI{5}{min}.
+    \itembox \textbf{Moxie} to avoid making Infection costs \num{2} if pushed.
 \end{itemize}
 
 
@@ -111,8 +111,9 @@
 \end{eptable}
 
 \begin{itemize}
-    \itembox \textbf{Checkout Time}: next long rest or unconscious situation infection may take over and acts with character without character knowing.
-    \itembox \textbf{Interference}: When in future making some test, do an opposed \skill{WIL} vs. \skill[+30]{Infection} before that. If infection wins, player suffers critical failure. Preferably during dramatic situations.
+    \itembox \textbf{Role Playing}. Consider have other player do Infection Test, and role play the \textit{voice of the infection}, describe compulsions and hallucinations, or even maintain a sort of alter-ego internal dialogue with the async.
+    \itembox \textbf{Checkout Time}. Next long rest or unconscious situation infection may take over and acts with character without character knowing.
+    \itembox \textbf{Interference}. When in future making some test, do an opposed \skill{WIL} vs. \skill[+30]{Infection} before that. If infection wins, player suffers critical failure. Preferably during dramatic situations.
     \itembox Each short rest reduces Infection Rating by \modifier{-10} (down to base). Each long rest resets Infection Rating to base.
 \end{itemize}
 
@@ -134,8 +135,8 @@
 \end{eptable}
 
 \begin{itemize}
-   \itembox Modified behavior: If IR $<$ 33 player is compelled to perform or avoid. If IR $<$ 66 a \skill{WIL} check is needed. If IR $\geq$ 66 also suffer \dice{1d6} stress if not complying.
-   \itembox If motivation played well, recover stress. If not fulfilled, receive \dice{1d6} stress. Resisting motivation requires \skill{WIL} and inflicts \modifier{-10} to all actions.
+   \itembox \textbf{Modified Behavior}. If IR $<$ 33 player is compelled to perform or avoid. If IR $<$ 66 a \skill{WIL} check is needed. If IR $\geq$ 66 also suffer \dice{1d6} stress if not complying.
+   \itembox \textbf{Motivation}. If role played played well, recover stress. If not fulfilled, receive \dice{1d6} stress. Resisting motivation requires \skill{WIL} and inflicts \modifier{-10} to all actions.
 \end{itemize}
 
 \bigskip
@@ -198,6 +199,4 @@
    6 & Motivation: +Express True Form (modify yourself to true form).\\
 \end{eptable}
 
-\begin{itemize}
-    \itembox Sub-strain effect list is gross oversimplification. Check rule book for detailed advice how strain acts and how to role play.
-\end{itemize}
+Sub-strain effect list is gross oversimplification. Check rule book for detailed advice how strain acts and how to role play.
