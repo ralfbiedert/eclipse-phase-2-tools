@@ -7,5 +7,5 @@
 *.gz
 *.xdv
 *.yaml
-cheat-sheet/*.pdf
+cheat-sheet-system/*.pdf
 lost-transmission/*.pdf
