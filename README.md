@@ -10,12 +10,23 @@ Changes April 2019
 * Reworked most other chapters
 * Added headers for improved clarity
 
+# Character Sheet Online
+
+- [**OneDrive Excel Character Sheets**](https://1drv.ms/f/s!ApNUXXmnOvVxhbZzbXD7_0qGLCZvmQ) -- Download, view and clone your own character sheet from here.
+
 
 # Preview
 
-![Preview](/gfx/preview-cheat-sheet-r1.jpg)
+System & Gear Cheat Sheet:
+
+![Preview](/gfx/preview-cheat-sheets-r1.jpg)
+
+
+Character Sheet:
+
+![Preview](/gfx/preview-character-sheet-r1.jpg)
 
 
 # License
 
-See file `cheat-sheet/ch.credits.tex` for details,  basically CC-BY.
+All the LaTeX, Excel and schematic stuff is CC-BY me. All PDF `gfx` tables, the `backgroundLR` and logos files are from Posthuman Studios (e.g., CC-BY-NC-SA). The mini soldier outlines were CC-0.
