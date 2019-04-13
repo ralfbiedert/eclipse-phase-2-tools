@@ -1,0 +1,46 @@
+
+% Make better use of the page
+\geometry{% A4
+	papersize={210mm, 297mm},
+	textwidth=172mm,
+	textheight=270mm,
+	inner=15mm,
+	top=15mm,
+	columnsep=15mm,
+	footskip=2mm,
+}
+
+\hfuzz=0.64pt % ignore hbox warnings below this threshold (caused by tables)
+\setlength\parindent{0pt} % don't indent beginning of paragraph
+\pagenumbering{gobble} % no page numbers
+
+\newtoggle{print} % Can be user set to enable printable version (removing background)
+
+
+\AddToShipoutPicture{ % Add background picture
+\nottoggle{print}{ % If print it not set, add the background picture
+	\ifnumodd{\value{page}}%
+	{
+	    % If we are on an odd / front page
+	    \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics{gfx/backgroundL.jpg}\vfill}}
+
+	    \begin{tikzpicture}[remember picture, overlay]
+			% If we have two-column
+			\draw[fill=white,color=white,opacity=0.9] (1.2,0) rectangle (28.5, 290);;
+	        % \draw[fill=white,color=white,opacity=0.9] (15.5,0) rectangle (28.8, 290);;
+	    \end{tikzpicture}%
+
+	}{
+	    % If we are on an even page
+	    \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[width=\paperwidth,height=\paperheight]{gfx/backgroundR.jpg}\vfill}}
+
+	    \begin{tikzpicture}[remember picture, overlay]
+			% If we have two-column
+			\draw[fill=white,color=white,opacity=0.9] (1.2,0) rectangle (28.5, 290);;
+	        % \draw[fill=white,color=white,opacity=0.9] (15.5,0) rectangle (28.8, 290);;
+	    \end{tikzpicture}%
+	}%
+}}
+
+\AtBeginShipout{%
+}
