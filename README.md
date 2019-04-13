@@ -1,7 +1,7 @@
 
 # Download
 
-[![Download](/gfx/download.jpg)](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2019-04-07/ep2-cheat-sheet-2019-04-07.pdf)
+[![Download](/gfx/download.jpg)](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2019-04-13/release-2019-04-13.zip)
 
 Changes April 2019
 
