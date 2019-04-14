@@ -115,16 +115,20 @@ The basic combat sequence:
 \end{itemize}
 
 
-
-% \begin{figure}[h!]%
-%    \includegraphics[scale=1.0]{gfx/combat-combined-fire-mod}%
-% \end{figure}%
-
-\begin{figure}[h!]%
+\begin{figure}[htbp!]%
+   \centering
    \includegraphics[scale=0.95]{gfx/combat-melee-modifiers}%
 \end{figure}%
 
-% \pdfsnippet{gfx/combat-combined}
+\begin{figure}[htbp!]%
+   \centering
+   \includegraphics[scale=0.95]{gfx/combat-combined-fire-mod}%
+\end{figure}%
+
+\begin{figure}[htbp!]%
+   \centering
+   \includegraphics[scale=0.95]{gfx/combat-ranged-modifiers}%
+\end{figure}%
 
 
 \subsection*{Surprises}
@@ -139,10 +143,11 @@ The basic combat sequence:
 
 \begin{eptable}{ l | X }
    \epheader{2}{Special Attacks}
+   Area of Effect & Cone or Blast: DV/2 on successful Fray/2, unless near cover.\\
    Centered Blast & DV drops by \modifier{-2} for each meter from center.\\
    Uniform Blast & All in range full DV. Drops by \modifier{-2} for each meter outside.\\
    Cone & See Cone Attack table.\\
-   Helpless Target & Inflict maximum DV, no defense. Does not apply in combat.\\
+   Helpless Target & Roll attack. Success target dies. Fail max DV. OOC only.\\
    Called Shot & Attack with \modifier{-10}. On superior success see Called Shots table. \\
    Shock Attack & Only affects bio morphs, not synths. Details below. \\
    Social Attack & Opposed test \skill{Provoke} vs \skill{WIL}. See table Social Attacks. \\
@@ -163,14 +168,13 @@ The basic combat sequence:
     %
 \end{itemize}
 
-
 \bigskip
 
 \begin{eptable}{ l | X }
    \epheader{2}{Cone Attack}
    Point Blank \& Close & Affects \num{1} target, \dv{+1d10}.\\
    Range & Affects \num{2} targets \SI{1}{m} of each other.\\
-   Beyond Range & Affects \num{2} targets \SI{1}{m} of each other, \dv{-1d10}\\
+   Beyond Range & Affects \num{3} targets \SI{2}{m} of each other, \dv{-1d10}\\
 \end{eptable}
 
 Cone attack requires weapon that does cone damage.
@@ -283,10 +287,24 @@ See core book for details on traits for given weapon / ammunition.
    \epheader{2}{Seekers \& Grenades}
    Adjust Blast Radius & Declare less (uniform) or reduction per meter (CAE).\\
    Jumping Grenades & \skill{REF} and \dv{+1d10} for you, but -(AV+10) others.\\
-   Scatter & On miss, \dice{d10}m in random direction, double per sup. fail.\\
    Sticky & No scatter on hit.$^?$\\
    Throw Back & \skill{REF} to throw back if in range.\\
 \end{eptable}
+
+\begin{itemize}
+   \itembox \textbf{Scatter}: On miss, roll 1 direction die (2D, gravity) or
+   2 direction die (3D, microgravity) and distance die (as meters). Distance
+   double per superior.
+   %
+\end{itemize}
+
+\begin{figure}[h!]%
+   \centering
+   \includegraphics[scale=0.71]{gfx/combat-scatter}%
+\end{figure}%
+
+
+
 
 \bigskip
 
