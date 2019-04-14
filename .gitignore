@@ -8,5 +8,6 @@
 *.xdv
 *.yaml
 cheat-sheet-system/*.pdf
+cheat-sheet-equipment/*.pdf
 lost-transmission/*.pdf
 release
