@@ -1,7 +1,10 @@
 
 # Download
 
-[![Download](/gfx/download.jpg)](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2019-05-04/release-2019-05-04.zip)
+[![Download](/gfx/button-zip.png)](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2019-05-04/release-2019-05-04.zip)
+[![PDFs](/gfx/button-pdf.png)](https://1drv.ms/f/s!ApNUXXmnOvVxhbcH5E5fbDfDFQ3_qw)
+
+**Everything** contains the cheat sheets (PDF) and the character sheets (PDF and Excel). **Cheat Sheets** only contains a live view of the cheat sheets.
 
 Changes May 2019
 
@@ -18,6 +21,7 @@ Changes April 2019
 # Character Sheet Online
 
 - [**OneDrive Excel Character Sheets**](https://1drv.ms/f/s!ApNUXXmnOvVxhbZzbXD7_0qGLCZvmQ) -- Download, view and clone your own character sheet from here.
+
 
 
 # Preview
