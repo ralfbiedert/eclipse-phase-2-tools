@@ -188,34 +188,19 @@ and users that have gained or stolen access to these systems.
 \end{itemize}
 
 
-\subsection*{Breaking In}
+\subsection*{Breaking In / Hacking}
 
-\begin{eptable}{ l | X }
-   \epheader{2}{Ways of Hacking}
-   Acquiring Credentials & Get access to actual credential.\\
-   Circumvent Authentication & Gain or forge access tokens.\\
-   Spoofing & Intercept traffic and impersonate user.\\
-   Intrusion & Find exploits to gain access.\\
-\end{eptable}
+\begin{figure}[H]%
+   \centering
+   \includegraphics[scale=0.69]{gfx/mesh-hacking-sequence}%
+\end{figure}%
 
-\bigskip
-
-% \begin{eptable}{ l | X }
-%    \epheader{2}{Circumventing Authentication}
-%    % Addiction & Needs fix or receive negative modifier.\\
-%    Acquiring Credentials & Get access to actual credential.\\
-%    Forging Authentication & Might require multiple tests and lengthy times.\\
-%    Spoofing & Take over existing user connection, see below.\\
-%    Intrusion & Exploit system weakness, see chapter below.\\
-% \end{eptable}
 
 \begin{itemize}
-   \itembox Credentials usually do not raise alert. Spoofing or Intrusion might.
+   \itembox \textbf{Credentials}. Can either be real (e.g., stolen), or forged.
    \itembox \textbf{Hacking Basics}. Usually opposed roll between attacker \skill{Infosec} and system \skill{Firewall} (default protection) or defender \skill{Infosec} (if actively protected).
    \itembox \textbf{Spoofing}. Monitor active connection of existing user with sniffer. Then take over victim's client with \skill{Hacking} test, complex action. This \textit{only} allows sending. Victim VPN gives \modifier{-30}, Firewall can detect. To also take over victim's server for full-duplex, similar \skill{Hacking} test must succeed.
    \itembox \textbf{Intrusion Requirements}. Requires a direct connection to target, either wirelessly (need to know target mesh ID), via an access port, or via tapping into a cable (\skill{Hardware: Electronics}).
-   \itembox \textbf{Intrusion (Brute Force)}. Complex action, opposed \skill{Hacking} at \modifier{-30}. If successful get user access level (1 superior gives security account, 2 give admin account). If successful attacker gets \textbf{spotted} status, system goes into \textbf{active alert}. On critical success \textbf{covert} status and \textbf{passive alert}. On failure no access and system goes \textbf{passive alert}.
-   \itembox \textbf{Intrusion (Subtle)}. Takes \SI{1}{h} or longer task action. Success grants user access level (1 superior gives security account, 2 give admin account) and \textbf{covert status}. On critical success \textbf{hidden}. If firewall succeeds its roll (regardless whether it still loses opposed test) \textbf{passive alert} triggered.
    \itembox Remember to take time, use pools to redo rolls, or get extra mesh actions.
 \end{itemize}
 
@@ -231,19 +216,15 @@ and users that have gained or stolen access to these systems.
 
 \subsection*{Status \& Countermeasures}
 
-\begin{eptable}{ l | X }
-   \epheader{2}{Intruder Status}
-    Hidden & System completely unaware, no logs, +10 to subvert system.\\
-    Covert & System aware of presence, but does not consider threat.\\
-    Spotted & System considers threat, active alert, launches countermeasures.\\
-\end{eptable}
+\begin{figure}[H]%
+   \centering
+   \includegraphics[scale=0.65]{gfx/mesh-hacking-visibility}%
+\end{figure}%
 
 \bigskip
 
 \begin{itemize}
-   \itembox \textbf{Upgrade Status}. Can spend complex action \skill{Hacking}. Superior gives improves status by extra step. Does not erase logs or lower alert, but makes harder to pinpoint attacker.
-   \itembox \textbf{Downgrade Status}. Any \skill{Infosec} while within system risks exposure, superior failure triggers \textbf{passive alert}, critical failure \textbf{spotted status}.
-   \itembox \textbf{Zero In}. To take action against attacker, system needs to zero in. Pinpointing intruder on passive alert as opposed \skill{Infosec} against intruder. System suffers \modifier{-30} if intruder hidden. If successful, attacker \textbf{spotted}, system goes \textbf{active alert}.
+   \itembox \textbf{Zero In}. To take action against attacker, system needs to zero in, \ie, attacker needs to be \textbf{spotted}.
 \end{itemize}
 
 

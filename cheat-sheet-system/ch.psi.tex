@@ -5,29 +5,10 @@
 
 \subsection*{Invoking}
 
-
-\begin{eptable}{ l | X }
-   \epheader{2}{Sleights}
-   Psi-Chi & Always on.\\
-   Psi-Gamma & Require action to activate and successful Psi-Test.\\
-\end{eptable}
-
-\bigskip
-
-
-\begin{eptable}{ l | X }
-   \epheader{2}{Opposed Psi Test}
-   Defender Wins Critical & Async locked out until recharge.\\
-   Async Wins Critical & Double effect or damage.\\
-   Async Fails Critical & \dv{1d6} \textbf{physical} damage.\\
-\end{eptable}
-
-\begin{itemize}
-    \itembox \textbf{Resisting}. Target opposes with \skill{WIL}. May go full psychic defense as complex action to gain \modifier{+30}. Unconscious may not resist.
-    \itembox \textbf{Awareness}. Target aware \textit{something} is happening every time it wins its part of Psi test.
-    However, very unlikely it understands that targeted by Psi unless Async itself.
-\end{itemize}
-
+\begin{figure}[H]%
+   \centering
+   \includegraphics[scale=0.615]{gfx/psi-flow}%
+\end{figure}%
 
 \bigskip
 
@@ -37,18 +18,6 @@
    Animals & Partially sapient \modifier{-20}, non-sapient animals \modifier{-30}.\\
    Aliens & At least \modifier{-20}, might not work at all.\\
 \end{eptable}
-
-
-
-% \bigskip
-
-% \begin{eptable}{ l | X }
-%    \epheader{2}{Psi Range}
-%    Self & Only the Async.\\
-%    Touch & Physical contact. For touch attack \modifier{+20}, do dmg., same action.\\
-%    Close & Beyond \SI{10}{m} gives \modifier{-10} per meter.\\
-%    Psi vs Psi & Touch becomes Close, Close \SI{20}{m}.\\
-% \end{eptable}
 
 \bigskip
 
@@ -97,18 +66,15 @@
 
 \bigskip
 
-\subsection*{Infection}
+\subsection*{Infection Test}
 
 
-\begin{eptable}{ X }
-   \epheader{1}{Infection Tests}
-   Test made every time Psi-Gamma sleight activates (or pushing Chi).\\
-   Target number equals current infection rating.\\
-   Critical failure: Virus loses grip until next recharge.\\
-   Success is bad: Suffer influence as in table, each superior +\num{1} on roll.\\
-   Critical success even worse: \textit{Checkout time} or \textit{Interference}.\\
-   In any case infection rating increases after test made.\\
-\end{eptable}
+\begin{figure}[H]%
+   \centering
+   \includegraphics[scale=0.615]{gfx/psi-infection}%
+\end{figure}%
+
+\bigskip
 
 \begin{itemize}
     \itembox \textbf{Role Playing}. Consider have other player do Infection Test, and role play the \textit{voice of the infection}, describe compulsions and hallucinations, or even maintain a sort of alter-ego internal dialogue with the async.
@@ -143,7 +109,7 @@
 
 \begin{eptable}{ l | X }
    \epheader{2}{Architect Sub-Strain}
-   1 & Physical Damage.\\
+   1 & Physical Damage, \dv{1d6} as fatigue, headache, hemorrhaging.\\
    2 & Enhanced Behavior: Arrogance.\\
    3 & Restricted Behavior: Relaxation.\\
    4 & Motivation: +Hoard (hoard weird things, organs, \textellipsis).\\
@@ -155,7 +121,7 @@
 
 \begin{eptable}{ l | X }
    \epheader{2}{Beast Sub-Strain}
-   1 & Physical Damage.\\
+   1 & Physical Damage, \dv{1d6} as fatigue, headache, hemorrhaging.\\
    2 & Enhanced Behavior: Aggression.\\
    3 & Restricted Behavior: Remorse.\\
    4 & Motivation: +Domination (do whatever needed to win).\\
@@ -167,7 +133,7 @@
 
 \begin{eptable}{ l | X }
    \epheader{2}{Haunter Sub-Strain}
-   1 & Physical Damage.\\
+   1 & Physical Damage, \dv{1d6} as fatigue, headache, hemorrhaging.\\
    2 & Enhanced Behavior: Avoidance.\\
    3 & Enhanced Behavior: Mistrust.\\
    4 & Motivation: +Cut Ties (relationships are pointless).\\
@@ -179,7 +145,7 @@
 
 \begin{eptable}{ l | X }
    \epheader{2}{Stranger Sub-Strain}
-   1 & Physical Damage.\\
+   1 & Physical Damage, \dv{1d6} as fatigue, headache, hemorrhaging.\\
    2 & Enhanced Behavior: Deceit.\\
    3 & Enhanced Behavior: Self Sabotage.\\
    4 & Motivation: +Foil Plans (make others fail in their plans).\\
@@ -191,7 +157,7 @@
 
 \begin{eptable}{ l | X }
    \epheader{2}{Xenomorph Sub-Strain}
-   1 & Physical Damage.\\
+   1 & Physical Damage, \dv{1d6} as fatigue, headache, hemorrhaging.\\
    2 & Enhanced Behavior: Non-verbal Communication.\\
    3 & Enhanced Behavior: Cliquishness.\\
    4 & Motivation: +Transform Environment (for alien presence).\\
