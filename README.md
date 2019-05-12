@@ -18,9 +18,17 @@ Changes April 2019
 * Reworked most other chapters
 * Added headers for improved clarity
 
-# Character Sheet Online
 
-- [**OneDrive Excel Character Sheets**](https://1drv.ms/f/s!ApNUXXmnOvVxhbZzbXD7_0qGLCZvmQ) -- Download, view and clone your own character sheet from here.
+# Tools Online
+
+**Combat**
+- [**GM Combat Tool (Excel)**](https://1drv.ms/f/s!ApNUXXmnOvVxhbcTkSA4Tnscpwukdg) -- Powerful combat 🔫 tracker and encounter builder.
+
+**Character Sheets**
+- [**Lite (Excel + PDF)**](https://1drv.ms/f/s!ApNUXXmnOvVxhbZzbXD7_0qGLCZvmQ) -- Clean character 🤖 sheet for online and print use.
+
+If you want to improve the existing Excel sheets, just send me a ticket. I can then give you live edit permissions to the documents.
+
 
 
 
