@@ -44,6 +44,12 @@ Character Sheet:
 ![Preview](/gfx/preview-character-sheet-r1.jpg)
 
 
+GM Combat Tool:
+
+![Preview](/gfx/preview-gm-combat-tool-r1.jpg)
+
+
+
 # License
 
 All the LaTeX, Excel and schematic stuff is CC-BY me. All PDF `gfx` tables, the `backgroundLR` and logos files are from Posthuman Studios (e.g., CC-BY-NC-SA). The mini soldier outlines were CC-0.
