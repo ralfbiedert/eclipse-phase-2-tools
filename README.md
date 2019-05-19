@@ -2,7 +2,7 @@
 # Download
 
 
-**System + Gear Cheat Sheet (PDF)** -- Important rules 📖 and gear 📟 in condensed format.
+**System + Gear Cheat Sheet (PDF)** -- Important rules and gear in condensed format.
 
 ![Preview](/gfx/preview-cheat-sheets-r1.jpg)
 
@@ -10,7 +10,7 @@
 
 ---
 
-**Character Sheet Lite (Excel + PDF)** -- Clean character 🤖 sheet for online and print use.
+**Character Sheet Lite (Excel + PDF)** -- Clean character sheet for online and print use.
 
 ![Preview](/gfx/preview-character-sheet-r1.jpg)
 
@@ -18,7 +18,7 @@
 
 ---
 
-**GM Combat Tool (Excel)** -- Powerful combat 🐙🔫 tracker and encounter builder.
+**GM Combat Tool (Excel)** -- Powerful combat tracker and encounter builder.
 
 ![Preview](/gfx/preview-gm-combat-tool-r1.jpg)
 
