@@ -1,10 +1,10 @@
 
 # Download
 
-[![Download](/gfx/button-zip.png)](https://github.com/ralfbiedert/eclipse-phase-2-tools/releases/download/v2019-05-04/release-2019-05-04.zip)
-[![PDFs](/gfx/button-pdf.png)](https://1drv.ms/f/s!ApNUXXmnOvVxhbcH5E5fbDfDFQ3_qw)
+[![Download](/gfx/button-cheat-sheets.png)](https://1drv.ms/f/s!ApNUXXmnOvVxhbcH5E5fbDfDFQ3_qw)
+[![Download](/gfx/button-character-sheets.png)](https://1drv.ms/f/s!ApNUXXmnOvVxhbZzbXD7_0qGLCZvmQ)
+[![Download](/gfx/button-gm-tool.png)](https://1drv.ms/f/s!ApNUXXmnOvVxhbcTkSA4Tnscpwukdg)
 
-**Everything** contains the cheat sheets (PDF) and the character sheets (PDF and Excel). **Cheat Sheets** only contains a live view of the cheat sheets.
 
 Changes May 2019
 
@@ -21,11 +21,17 @@ Changes April 2019
 
 # Tools Online
 
-**Combat**
-- [**GM Combat Tool (Excel)**](https://1drv.ms/f/s!ApNUXXmnOvVxhbcTkSA4Tnscpwukdg) -- Powerful combat 🔫 tracker and encounter builder.
+
+**Cheat Sheets**
+
+- [**System + Gear Cheat Sheet (PDF)**](https://1drv.ms/f/s!ApNUXXmnOvVxhbcH5E5fbDfDFQ3_qw) -- Important rules 📖 and gear 📟 in condensed format.
 
 **Character Sheets**
 - [**Lite (Excel + PDF)**](https://1drv.ms/f/s!ApNUXXmnOvVxhbZzbXD7_0qGLCZvmQ) -- Clean character 🤖 sheet for online and print use.
+
+
+**Combat**
+- [**GM Combat Tool (Excel)**](https://1drv.ms/f/s!ApNUXXmnOvVxhbcTkSA4Tnscpwukdg) -- Powerful combat 🐙🔫 tracker and encounter builder.
 
 If you want to improve the existing Excel sheets, just send me a ticket. I can then give you live edit permissions to the documents.
 
